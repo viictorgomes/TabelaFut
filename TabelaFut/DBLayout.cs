@@ -53,13 +53,14 @@ namespace TabelaFut
 
         public static T Deserialize<T>()
         {
-            if(!File.Exists($"{Application.StartupPath}\\{typeof(T).ToString()}.json"))
+            if(!File.Exists($"{Application.StartupPath}\\{typeof(T).Name.ToString()}.json"))
             {
+                MessageBox.Show(typeof(T).Name.ToString());
                 var ret = (T)Activator.CreateInstance(typeof(T));
                 return ret;
             }
 
-            return JsonConvert.DeserializeObject<T>(File.ReadAllText($"{Application.StartupPath}\\{typeof(T).ToString()}.json"));
+            return JsonConvert.DeserializeObject<T>(File.ReadAllText($"{Application.StartupPath}\\{typeof(T).Name.ToString()}.json"));
 
         }
     }

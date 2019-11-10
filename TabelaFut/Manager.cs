@@ -28,7 +28,7 @@ namespace TabelaFut
         }
 
         public static Manager Instance =>_inst;
-        public static string[] Times => _inst._times;
+        public static string[] TimesDefault=> _inst._times;
 
 
 
