@@ -32,7 +32,7 @@
             this.btn_CancelarEditArbitro = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnSalvar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtNome = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.lbl_ID = new MaterialSkin.Controls.MaterialLabel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.txtIdade = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtAltura = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -90,18 +90,18 @@
             this.txtNome.TabStop = false;
             this.txtNome.UseSystemPasswordChar = false;
             // 
-            // materialLabel1
+            // lbl_ID
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(8, 83);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel1.TabIndex = 20;
-            this.materialLabel1.Text = "ID: (0)";
+            this.lbl_ID.AutoSize = true;
+            this.lbl_ID.Depth = 0;
+            this.lbl_ID.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbl_ID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_ID.Location = new System.Drawing.Point(8, 83);
+            this.lbl_ID.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_ID.Name = "lbl_ID";
+            this.lbl_ID.Size = new System.Drawing.Size(49, 19);
+            this.lbl_ID.TabIndex = 20;
+            this.lbl_ID.Text = "ID: (0)";
             // 
             // materialDivider1
             // 
@@ -156,7 +156,7 @@
             this.Controls.Add(this.txtAltura);
             this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.materialDivider1);
-            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.lbl_ID);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btn_CancelarEditArbitro);
             this.Controls.Add(this.btnSalvar);
@@ -174,7 +174,7 @@
         private MaterialSkin.Controls.MaterialFlatButton btn_CancelarEditArbitro;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalvar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNome;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel lbl_ID;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtIdade;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtAltura;

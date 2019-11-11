@@ -43,6 +43,7 @@ namespace TabelaFut.Forms
                     throw new Exception("Falha na instância frmEditJogador::_jogador");
 
                 _jogador = Jogador;
+                lbl_ID.Text = $"ID: ({_jogador.ID})";
                 txtNome.Text = _jogador.Nome;
                 txtIdade.Text = _jogador.Idade.ToString();
                 txtAltura.Text = _jogador.Altura.ToString();

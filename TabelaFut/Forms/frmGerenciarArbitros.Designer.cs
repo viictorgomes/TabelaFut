@@ -128,7 +128,7 @@
             this.btn_FecharGerenciarTimes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_FecharGerenciarTimes.Depth = 0;
             this.btn_FecharGerenciarTimes.Icon = null;
-            this.btn_FecharGerenciarTimes.Location = new System.Drawing.Point(237, 374);
+            this.btn_FecharGerenciarTimes.Location = new System.Drawing.Point(229, 374);
             this.btn_FecharGerenciarTimes.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_FecharGerenciarTimes.Name = "btn_FecharGerenciarTimes";
             this.btn_FecharGerenciarTimes.Primary = true;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 420);
+            this.ClientSize = new System.Drawing.Size(314, 420);
             this.Controls.Add(this.btn_FecharGerenciarTimes);
             this.Controls.Add(this.materialDivider2);
             this.Controls.Add(this.btn_EditArbitro);
