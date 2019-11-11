@@ -31,7 +31,7 @@ cada time ganha 1 ponto.
 
 **RN02** – Quantidade de times e rodadas no campeonato  
 **Descrição:** o Campeonato deve ter 20 equipes e 19 rodadas.  
-RN03 – Definição das rodadas.  
+**RN03** – Definição das rodadas.  
 **Descrição:** Antes do inicio do campeonato as rodadas devem ser definidas.  
 • Cada rodada deve ter 10 jogos, sendo os confrontos definidos de forma aleatória. Todas as
 equipes se enfrentam apenas 1 vez durante o campeonato.  

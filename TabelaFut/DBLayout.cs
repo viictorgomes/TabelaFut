@@ -9,14 +9,20 @@ using Newtonsoft.Json;
 
 namespace TabelaFut
 {
-
     public class DBTimes 
     {
         public List<LayoutTimes> Times = new List<LayoutTimes>();
+
+        [JsonProperty(PropertyName = "Ultimo ID")]
+        public int UltimoID = 0;
+
+        [JsonIgnore]
+        public string[] Nomes => Times.Select(x => x.Nome).ToArray();
     }
 
     public class LayoutTimes
     {
+        public int ID;
         public string Nome;
         public int Pontos;
         public int Vitorias;
@@ -32,12 +38,21 @@ namespace TabelaFut
         [JsonProperty(PropertyName = "Saldo de Gols")]
         public int SaldoDeGols;
 
-
-
+        public List<int> Jogadores = new List<int>();
     }
 
     public class DBJogadores
     {
+        public List<LayoutJogadores> Jogadores = new List<LayoutJogadores>();
+        [JsonProperty(PropertyName = "Ultimo ID")]
+        public int UltimoID = 0;
+        [JsonIgnore]
+        public string[] Nomes => Jogadores.Select(x => x.Nome).ToArray();
+    }
+
+    public class LayoutJogadores
+    {
+        public int ID;
         public string Nome;
         public int Idade;
         public int Altura;
@@ -55,13 +70,11 @@ namespace TabelaFut
         {
             if(!File.Exists($"{Application.StartupPath}\\{typeof(T).Name.ToString()}.json"))
             {
-                MessageBox.Show(typeof(T).Name.ToString());
                 var ret = (T)Activator.CreateInstance(typeof(T));
                 return ret;
             }
 
             return JsonConvert.DeserializeObject<T>(File.ReadAllText($"{Application.StartupPath}\\{typeof(T).Name.ToString()}.json"));
-
         }
     }
 }
