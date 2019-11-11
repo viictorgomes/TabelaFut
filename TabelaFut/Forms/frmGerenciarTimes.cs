@@ -28,7 +28,6 @@ namespace TabelaFut
             this.StartPosition = FormStartPosition.CenterScreen;
 
             Refresh();
-
         }
 
         private void LbTimes_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,7 +40,6 @@ namespace TabelaFut
             lbAtletas.DataSource = arr;
 
             lblJogadoresNoTime.Text = $"Jogadores do Time ({arr.Count()})";
-
         }
 
         private void LbAtletas_Format(object sender, ListControlConvertEventArgs e)
@@ -68,7 +66,8 @@ namespace TabelaFut
         {
             if(lbTimes.SelectedIndex == -1)
             {
-                MessageBox.Show("Selecione um time para editar.");
+                var msgBox = new CustomMsgBox("Ops!", $"Selecione um time para editar.", MessageBoxType.E_OK);
+                var result = msgBox.ShowDialog();
                 return;
             }
 
@@ -109,20 +108,24 @@ namespace TabelaFut
         {
             if (lbTimes.SelectedIndex == -1)
             {
-                MessageBox.Show("Selecione um time para remover.");
+                var errorMsgBox = new CustomMsgBox("Ops!", $"Selecione um time para remover.", MessageBoxType.E_OK);
+                var errorResult = errorMsgBox.ShowDialog();
                 return;
             }
 
             int id = (int)lbTimes.SelectedItem;
             var remover = Manager.Instance.dBTimes.Times.Find(x => x.ID == id);
 
-            var msgBox = new CustomMsgBox("Remover Time", $"Tem certeza de que deseja remover {remover.Nome}?", MessageBoxType.E_CancelarConfirmar);
+            var msgBox = new CustomMsgBox("Remover Time", $"Tem certeza de que deseja remover o time {remover.Nome}?", MessageBoxType.E_CancelarConfirmar);
             var result = msgBox.ShowDialog();
 
             if (result == DialogResult.OK)
             {
                 Manager.Instance.dBTimes.Times.Remove(remover);
                 DBManager.Serialize(Manager.Instance.dBTimes);
+
+                var infoMsgBox = new CustomMsgBox("Informações Atualizadas!", $"Time {remover.Nome} removido com sucesso.", MessageBoxType.E_CancelarConfirmar);
+                var infoResult = infoMsgBox.ShowDialog();
             }
 
             Refresh();

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TabelaFut.Forms;
 using static System.Windows.Forms.ListViewItem;
 
 namespace TabelaFut
@@ -115,6 +116,12 @@ namespace TabelaFut
         private void materialTabSelector1_Click(object sender, EventArgs e)
         {
             RefreshListView();
+        }
+
+        private void btnGerenciarArbitros_Click(object sender, EventArgs e)
+        {
+            var frm = new frmGerenciarArbitros();
+            frm.ShowDialog();
         }
     }
 }

@@ -59,6 +59,21 @@ namespace TabelaFut
         public int Gols;
     }
 
+    public class DBArbitros
+    {
+        public List<LayoutArbitros> Arbitros = new List<LayoutArbitros>();
+        [JsonProperty(PropertyName = "Ultimo ID")]
+        public int UltimoID = 0;
+        [JsonIgnore]
+        public string[] Nomes => Arbitros.Select(x => x.Nome).ToArray();
+    }
+
+    public class LayoutArbitros
+    {
+        public int ID;
+        public string Nome;
+    }
+
     public class DBManager
     {
         public static void Serialize<T>(T obj)

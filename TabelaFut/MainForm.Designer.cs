@@ -374,6 +374,7 @@
             this.btnGerenciarArbitros.Text = "Gerenciar Árbitros";
             this.btnGerenciarArbitros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGerenciarArbitros.UseVisualStyleBackColor = true;
+            this.btnGerenciarArbitros.Click += new System.EventHandler(this.btnGerenciarArbitros_Click);
             // 
             // btnGerenciarJogadores
             // 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TabelaFut.Forms;
 
 namespace TabelaFut
 {
@@ -38,20 +39,15 @@ namespace TabelaFut
                 txtNome.Text = _time.Nome;
             }
 
-
             Refresh();
-        }
-
-        private void FrmEditTime_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             if(txtNome.Text.Length == 0)
             {
-                MessageBox.Show("Insira um nome válido!");
+                var msgBox = new CustomMsgBox("Nome Inválido", $"Insira um nome válido!", MessageBoxType.E_OK);
+                var result = msgBox.ShowDialog();
                 return;
             }
             _time.Nome = txtNome.Text;
@@ -67,10 +63,11 @@ namespace TabelaFut
                 Manager.Instance.dBTimes.Times.Add(_time);
             }
 
+            var infoMsgBox = new CustomMsgBox("Informações Atualizadas!", $"Informações de árbitros atualizadas com sucesso!", MessageBoxType.E_OK);
+            var infoResult = infoMsgBox.ShowDialog();
 
             DBManager.Serialize(Manager.Instance.dBTimes);
             this.Close();
-
         }
 
 
@@ -83,7 +80,6 @@ namespace TabelaFut
 
             var all = allJogadores.Select(x => x.ID).ToArray();
             IdsDisponiveis = new List<int>(all);
-
 
             foreach (var time in allTimes)
             {
@@ -116,23 +112,24 @@ namespace TabelaFut
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            //lbDisponiveis.SelectedIndex
-
             if (lbDisponiveis.Items.Count == 0)
             {
-                MessageBox.Show("Para adicionar, é necessário selecionar um jogador disponível.");
+                var msgBox = new CustomMsgBox("Ops!", $"Para adicionar, é necessário selecionar um jogador disponível.", MessageBoxType.E_OK);
+                var result = msgBox.ShowDialog();
                 return;
             }
 
             if (lbDisponiveis.SelectedIndex == -1)
             {
-                MessageBox.Show("Para adicionar, é necessário selecionar um jogador disponível.");
+                var msgBox = new CustomMsgBox("Ops!", $"Para adicionar, é necessário selecionar um jogador disponível.", MessageBoxType.E_OK);
+                var result = msgBox.ShowDialog();
                 return;
             }
 
             if(_time.Jogadores.Count >= 24)
             {
-                MessageBox.Show("Limite máximo de 24 jogadores por time.");
+                var msgBox = new CustomMsgBox("Limite máximo atingido!", $"O máximo de jogadores por time foi atingido.", MessageBoxType.E_OK);
+                var result = msgBox.ShowDialog();
                 return;
             }
 
@@ -140,7 +137,6 @@ namespace TabelaFut
             _time.Jogadores.Add(selID);
             
             Refresh();
-
         }
 
         private void Refresh()
@@ -155,13 +151,15 @@ namespace TabelaFut
         {
             if (lbJogadoresNoTime.Items.Count == 0)
             {
-                MessageBox.Show("Para remover, é necessário selecionar um jogador do time.");
+                var msgBox = new CustomMsgBox("Ops!", $"Para remover, é necessário selecionar um jogador do time.", MessageBoxType.E_OK);
+                var result = msgBox.ShowDialog();
                 return;
             }
 
             if (lbJogadoresNoTime.SelectedIndex == -1)
             {
-                MessageBox.Show("Para remover, é necessário selecionar um jogador do time.");
+                var msgBox = new CustomMsgBox("Ops!", $"Para remover, é necessário selecionar um jogador do time.", MessageBoxType.E_OK);
+                var result = msgBox.ShowDialog();
                 return;
             }
 
@@ -169,6 +167,11 @@ namespace TabelaFut
             _time.Jogadores.Remove(selID);
             Refresh();
 
+        }
+
+        private void btn_CancelarEditTime_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -38,6 +38,7 @@
             this.lblJogadoresAtual = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.btn_CancelarEditTime = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -175,11 +176,29 @@
             this.materialDivider1.TabIndex = 9;
             this.materialDivider1.Text = "materialDivider1";
             // 
+            // btn_CancelarEditTime
+            // 
+            this.btn_CancelarEditTime.AutoSize = true;
+            this.btn_CancelarEditTime.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_CancelarEditTime.Depth = 0;
+            this.btn_CancelarEditTime.Icon = null;
+            this.btn_CancelarEditTime.Location = new System.Drawing.Point(263, 392);
+            this.btn_CancelarEditTime.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_CancelarEditTime.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_CancelarEditTime.Name = "btn_CancelarEditTime";
+            this.btn_CancelarEditTime.Primary = false;
+            this.btn_CancelarEditTime.Size = new System.Drawing.Size(91, 36);
+            this.btn_CancelarEditTime.TabIndex = 10;
+            this.btn_CancelarEditTime.Text = "Cancelar";
+            this.btn_CancelarEditTime.UseVisualStyleBackColor = true;
+            this.btn_CancelarEditTime.Click += new System.EventHandler(this.btn_CancelarEditTime_Click);
+            // 
             // frmEditTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 438);
+            this.Controls.Add(this.btn_CancelarEditTime);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.lblJogadoresAtual);
@@ -192,7 +211,6 @@
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmEditTime";
             this.Text = "Gerenciar Time";
-            this.Load += new System.EventHandler(this.FrmEditTime_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +227,6 @@
         private MaterialSkin.Controls.MaterialLabel lblJogadoresAtual;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSkin.Controls.MaterialFlatButton btn_CancelarEditTime;
     }
 }
