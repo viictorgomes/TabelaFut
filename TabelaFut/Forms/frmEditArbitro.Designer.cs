@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditArbitro));
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.txtNome = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnSalvar = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -105,6 +106,7 @@
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmEditArbitro";
             this.Text = "Gerenciar Árbitro";

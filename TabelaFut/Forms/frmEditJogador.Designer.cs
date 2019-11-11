@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditJogador));
             this.btn_CancelarEditArbitro = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnSalvar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtNome = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -159,6 +160,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btn_CancelarEditArbitro);
             this.Controls.Add(this.btnSalvar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmEditJogador";
             this.Text = "Gerenciar Jogador";

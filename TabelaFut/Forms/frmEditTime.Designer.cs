@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditTime));
             this.btnSalvar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtNome = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lbDisponiveis = new System.Windows.Forms.ListBox();
@@ -209,6 +210,7 @@
             this.Controls.Add(this.lbDisponiveis);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmEditTime";
             this.Text = "Gerenciar Time";

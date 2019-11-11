@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMsgBox));
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.lbl_Mensagem = new MaterialSkin.Controls.MaterialLabel();
             this.btn_OK = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -103,6 +104,7 @@
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.lbl_Mensagem);
             this.Controls.Add(this.materialDivider1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "CustomMsgBox";
             this.Text = "CustomMsgBox";

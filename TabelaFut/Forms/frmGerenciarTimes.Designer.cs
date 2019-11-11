@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGerenciarTimes));
             this.lbAtletas = new System.Windows.Forms.ListBox();
             this.lblJogadoresNoTime = new MaterialSkin.Controls.MaterialLabel();
             this.btn_AddTime = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -189,6 +190,7 @@
             this.Controls.Add(this.btn_EditTime);
             this.Controls.Add(this.btn_ExcluirTime);
             this.Controls.Add(this.btn_AddTime);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmGerenciarTimes";
             this.Text = "Gerenciar Times";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGerenciarArbitros));
             this.lbArbitros = new System.Windows.Forms.ListBox();
             this.lblArbitros = new MaterialSkin.Controls.MaterialLabel();
             this.btn_EditArbitro = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -149,6 +150,7 @@
             this.Controls.Add(this.btn_AddArbitro);
             this.Controls.Add(this.lblArbitros);
             this.Controls.Add(this.lbArbitros);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmGerenciarArbitros";
             this.Text = "Gerenciar Árbitros";
