@@ -91,7 +91,6 @@ namespace TabelaFut
                     item.SubItems[1].BackColor = Color.FromArgb(52, 168, 83);
                 else if(index > 17)
                         item.SubItems[1].BackColor = Color.FromArgb(234, 67, 53);
-
             }
 
         }
@@ -121,6 +120,12 @@ namespace TabelaFut
         private void btnGerenciarArbitros_Click(object sender, EventArgs e)
         {
             var frm = new frmGerenciarArbitros();
+            frm.ShowDialog();
+        }
+
+        private void btnGerenciarJogadores_Click(object sender, EventArgs e)
+        {
+            var frm = new frmGerenciarJogadores();
             frm.ShowDialog();
         }
     }

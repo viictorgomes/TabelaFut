@@ -16,3 +16,5 @@ C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.pdb
 C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.csprojAssemblyReference.cache
 C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.Forms.frmGerenciarArbitros.resources
 C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.Forms.frmEditArbitro.resources
+C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.Forms.frmGerenciarJogadores.resources
+C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.Forms.frmEditJogador.resources

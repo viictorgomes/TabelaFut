@@ -73,6 +73,12 @@
     <Compile Include="Forms\frmEditArbitro.Designer.cs">
       <DependentUpon>frmEditArbitro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmEditJogador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditJogador.Designer.cs">
+      <DependentUpon>frmEditJogador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEditTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="Forms\frmGerenciarArbitros.Designer.cs">
       <DependentUpon>frmGerenciarArbitros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGerenciarJogadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGerenciarJogadores.Designer.cs">
+      <DependentUpon>frmGerenciarJogadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmGerenciarTimes.cs">
       <SubType>Form</SubType>
@@ -106,11 +118,17 @@
     <EmbeddedResource Include="Forms\frmEditArbitro.resx">
       <DependentUpon>frmEditArbitro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditJogador.resx">
+      <DependentUpon>frmEditJogador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEditTime.resx">
       <DependentUpon>frmEditTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmGerenciarArbitros.resx">
       <DependentUpon>frmGerenciarArbitros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGerenciarJogadores.resx">
+      <DependentUpon>frmGerenciarJogadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmGerenciarTimes.resx">
       <DependentUpon>frmGerenciarTimes.cs</DependentUpon>
@@ -161,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\jogador100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atleta100px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -209,6 +209,7 @@
             this.Controls.Add(this.lbDisponiveis);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
+            this.MaximizeBox = false;
             this.Name = "frmEditTime";
             this.Text = "Gerenciar Time";
             this.ResumeLayout(false);

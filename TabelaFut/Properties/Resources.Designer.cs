@@ -73,6 +73,16 @@ namespace TabelaFut.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap atleta100px {
+            get {
+                object obj = ResourceManager.GetObject("atleta100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jogador100px {
             get {
                 object obj = ResourceManager.GetObject("jogador100px", resourceCulture);

@@ -149,6 +149,7 @@
             this.Controls.Add(this.btn_AddArbitro);
             this.Controls.Add(this.lblArbitros);
             this.Controls.Add(this.lbArbitros);
+            this.MaximizeBox = false;
             this.Name = "frmGerenciarArbitros";
             this.Text = "Gerenciar Árbitros";
             this.ResumeLayout(false);

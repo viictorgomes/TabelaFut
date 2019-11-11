@@ -105,8 +105,9 @@
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
+            this.MaximizeBox = false;
             this.Name = "frmEditArbitro";
-            this.Text = "frmEditArbitro";
+            this.Text = "Gerenciar Árbitro";
             this.ResumeLayout(false);
             this.PerformLayout();
 

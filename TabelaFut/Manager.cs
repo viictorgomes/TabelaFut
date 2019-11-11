@@ -18,6 +18,8 @@ namespace TabelaFut
 
         private static Manager _inst;
 
+        private Random rand = new Random();
+
         public static void Initialize()
         {
             if (_inst != null)
@@ -80,6 +82,8 @@ namespace TabelaFut
             DBManager.Serialize(dBTimes);
         }
 
+        
+
         public void CarregarJogadoresDefault()
         {
             dBJogadores.Jogadores.Clear();
@@ -90,9 +94,9 @@ namespace TabelaFut
                 {
                     ID = ++dBJogadores.UltimoID,
                     Nome = jogador,
-                    Altura = new Random().Next(160, 191),
+                    Altura = rand.Next(160, 191),
                     Gols = 0,
-                    Idade = new Random().Next(19, 37)
+                    Idade = rand.Next(19, 37)
                 });
             }
 

@@ -390,6 +390,7 @@
             this.btnGerenciarJogadores.Text = "Gerenciar Jogadores";
             this.btnGerenciarJogadores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGerenciarJogadores.UseVisualStyleBackColor = true;
+            this.btnGerenciarJogadores.Click += new System.EventHandler(this.btnGerenciarJogadores_Click);
             // 
             // button5
             // 
