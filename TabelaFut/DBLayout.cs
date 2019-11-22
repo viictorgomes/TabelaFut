@@ -92,4 +92,54 @@ namespace TabelaFut
             return JsonConvert.DeserializeObject<T>(File.ReadAllText($"{Application.StartupPath}\\{typeof(T).Name.ToString()}.json"));
         }
     }
+
+    public class DBEstadios
+    {
+        [JsonProperty(PropertyName = "Ultimo ID")]
+        public int UltimoID = 0;
+        public List<LayoutEstadios> Estadios = new List<LayoutEstadios>();
+    }
+
+    public class LayoutEstadios
+    {
+        public int ID;
+        public string Nome;
+        public List<LayoutTimes> Times = new List<LayoutTimes>();
+    }
+
+    public class DBPartidas
+    {
+        [JsonProperty(PropertyName = "Ultimo ID")]
+        public int UltimoID = 0;
+        public List<LayoutPartidas> Partidas = new List<LayoutPartidas>();
+    }
+
+    public class LayoutPartidas
+    {
+        public int ID;
+        public LayoutTimes TimeA;
+        public LayoutTimes TimeB;
+
+        public LayoutTimes TimeVencedor;
+
+        public int GolsTimeA;
+        public int GolsTimeB;
+
+        public List<LayoutArbitros> Arbitros = new List<LayoutArbitros>(4);
+        public LayoutEstadios Estadio;
+    }
+
+    public class DBRodadas
+    {
+        [JsonProperty(PropertyName = "Ultimo ID")]
+        public int UltimoID = 0;
+        public List<LayoutRodadas> Rodadas = new List<LayoutRodadas>();
+    }
+
+    public class LayoutRodadas
+    {
+        public int ID;
+        public int Rodada;
+        public List<LayoutPartidas> Partidas = new List<LayoutPartidas>(10);
+    }
 }
