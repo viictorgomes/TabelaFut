@@ -9,6 +9,8 @@ namespace TabelaFut
 {
     public class Manager
     {
+        #region Variáveis Fixas
+
         private readonly string[] _times = {"Athletico Paranaense", "Atlético Mineiro", "Avaí", "Bahia", "Botafogo", "Ceará", "Chapecoense", "Corinthians", "Cruzeiro", "CSA", "Flamengo",
                            "Fluminense", "Fortaleza", "Goiás", "Grêmio", "Internacional", "Palmeiras", "Santos", "São Paulo", "Vasco da Gama"};
 
@@ -17,6 +19,8 @@ namespace TabelaFut
         private readonly string[] _arbitros = { "Miguel", "Arthur", "Heitor", "Bernardo", "Davi", "Théo", "Lorenzo", "Gabriel", "Pedro", "Benjamin", "Matheus", "Lucas", "Nicolas", "Joaquim", "Samuel", "Henrique", "Rafael", "Guilherme", "Enzo", "Murilo", "Benício", "Gustavo", "Isaac", "João", "Miguel Lucca", "Enzo Gabriel", "Pedro Henrique", "Felipe", "João  Pedro", "Pietro", "Anthony", "Daniel", "Bryan", "Davi Lucca", "Leonardo", "Vicente", "Eduardo", "Antônio", "Vitor Noah", "Caio", "João Emanuel", "Cauã", "João Lucas", "Calebe", "Enrico", "Vinícius Bento", "Thales", "Thiago", "Giulio", "Estêvão" };
 
         private readonly string[] _estadios = { "Arena da Baixada", "Independência", "Ressacada", "Arena Fonte Nova", "Nilton Santos", "Arena Castelão", "Arena Condá", "Arena Corinthians", "Mineirão", "Rei Pelé", "Maracanã", "Serra Dourada", "Arena do Grêmio", "Beira-Rio", "Allianz Parque", "Vila Belmiro", "Morumbi", "São Januário" };
+
+        #endregion
 
         private static Manager _inst;
 
@@ -48,19 +52,24 @@ namespace TabelaFut
             CriarCampeonato();
         }
 
+        public static List<LayoutEstadios> EstadiosDisponiveis;
+        public static List<LayoutArbitros> ArbitrosDisponiveis;
+
         /* TODO: 
-         * Inserir de forma aleatória, 4 árbitros por partida;
+         * Inserir de forma aleatória, 4 árbitros por partida;    --FEITO
          * Randomizar quantidade de gols na partida e determinar o time vencedor de acordo com o número de gols feito;
          * Randomizar 1 jogador do time por cada gol feito;
-         * Preencher o estadio das partidas de acordo com as restrições;
+         * Preencher o estadio das partidas de acordo com as restrições;     --FEITO
          * */
         public static void CriarCampeonato()
         {
+            EstadiosDisponiveis = _inst.dBEstadios.Estadios;
+            ArbitrosDisponiveis = _inst.dBArbitros.Arbitros;
+
             var rodadas = new List<LayoutRodadas>(19);
             var partidas = new List<LayoutPartidas>(190);
 
             var times = _inst.dBTimes.Times;
-
             var timesA = times.GetRange(0, 10);
             var timesB = times.GetRange(10, 10);
 
@@ -73,14 +82,17 @@ namespace TabelaFut
                     var partida = new LayoutPartidas
                     {
                         TimeA = timesA[j],
-                        TimeB = timesB[j]
+                        TimeB = timesB[j],
+                        Arbitros = GetArbitros(),
+                        Estadio = GetEstadio(timesA[j], timesB[j])
                     };
+
                     rodada.Partidas.Add(partida);
                 }
 
                 var antigoTimesA = new List<LayoutTimes>();
                 var antigoTimesB = new List<LayoutTimes>();
-                
+
                 for (int j = 0; j < 10; j++)
                 {
                     antigoTimesA.Add(timesA[j]);
@@ -106,6 +118,37 @@ namespace TabelaFut
                 }
                 rodadas.Add(rodada);
             }
+        }
+
+        private static LayoutEstadios GetEstadio(LayoutTimes timeA, LayoutTimes timeB)
+        {
+            LayoutEstadios estadioAtual = null;
+
+            foreach (var estadio in EstadiosDisponiveis)
+            {
+                if (estadio.Times.Contains(timeA) || estadio.Times.Contains(timeB))
+                {
+                    estadioAtual = estadio;
+                    EstadiosDisponiveis.Remove(estadio);
+                }
+            }
+
+            return estadioAtual;
+        }
+
+        public static List<LayoutArbitros> GetArbitros()
+        {
+            var rand = new Random();
+            var arbitros = new List<LayoutArbitros>(4);
+
+            for (int i = 0; i < 4; i++)
+            {
+                var index = rand.Next(ArbitrosDisponiveis.Count - 1);
+                arbitros.Add(ArbitrosDisponiveis[index]);
+                ArbitrosDisponiveis.RemoveAt(index);
+            }
+
+            return arbitros;
         }
 
         public static Manager Instance => _inst;
@@ -161,7 +204,7 @@ namespace TabelaFut
                     Nome = estadio
                 });
             }
-            
+
             DBManager.Serialize(dBEstadios);
         }
 
