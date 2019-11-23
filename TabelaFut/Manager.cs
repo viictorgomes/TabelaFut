@@ -11,8 +11,7 @@ namespace TabelaFut
     {
         #region Variáveis Fixas
 
-        private readonly string[] _times = {"Athletico Paranaense", "Atlético Mineiro", "Avaí", "Bahia", "Botafogo", "Ceará", "Chapecoense", "Corinthians", "Cruzeiro", "CSA", "Flamengo",
-                           "Fluminense", "Fortaleza", "Goiás", "Grêmio", "Internacional", "Palmeiras", "Santos", "São Paulo", "Vasco da Gama"};
+        private readonly string[] _times = {"Athletico Paranaense", "Atlético Mineiro", "Avaí", "Bahia", "Botafogo", "Ceará", "Chapecoense", "Corinthians", "Cruzeiro", "CSA", "Flamengo", "Fluminense", "Fortaleza", "Goiás", "Grêmio", "Internacional", "Palmeiras", "Santos", "São Paulo", "Vasco da Gama"};
 
         private readonly string[] _jogadores = { "Liam", "Noah", "William", "James", "Logan", "Benjamin", "Mason", "Elijah", "Oliver", "Jacob", "Lucas", "Michael", "Alexander", "Ethan", "Daniel", "Matthew", "Aiden", "Henry", "Joseph", "Jackson", "Samuel", "Sebastian", "David", "Carter", "Wyatt", "Jayden", "John", "Owen", "Dylan", "Luke", "Gabriel", "Anthony", "Isaac", "Grayson", "Jack", "Julian", "Levi", "Christopher", "Joshua", "Andrew", "Lincoln", "Mateo", "Ryan", "Jaxon", "Nathan", "Aaron", "Isaiah", "Thomas", "Charles", "Caleb", "Josiah", "Christian", "Hunter", "Eli", "Jonathan", "Connor", "Landon", "Adrian", "Asher", "Cameron", "Leo", "Theodore", "Jeremiah", "Hudson", "Robert", "Easton", "Nolan", "Nicholas", "Ezra", "Colton", "Angel", "Brayden", "Jordan", "Dominic", "Austin", "Ian", "Adam", "Elias", "Jaxson", "Greyson", "Jose", "Ezekiel", "Carson", "Evan", "Maverick", "Bryson", "Jace", "Cooper", "Xavier", "Parker", "Roman", "Jason", "Santiago", "Chase", "Sawyer", "Gavin", "Leonardo", "Kayden", "Ayden", "Jameson", "Kevin", "Bentley", "Zachary", "Everett", "Axel", "Tyler", "Micah", "Vincent", "Weston", "Miles", "Wesley", "Nathaniel", "Harrison", "Brandon", "Cole", "Declan", "Luis", "Braxton", "Damian", "Silas", "Tristan", "Ryder", "Bennett", "George", "Emmett", "Justin", "Kai", "Max", "Diego", "Luca", "Ryker", "Carlos", "Maxwell", "Kingston", "Ivan", "Maddox", "Juan", "Ashton", "Jayce", "Rowan", "Kaiden", "Giovanni", "Eric", "Jesus", "Calvin", "Abel", "King", "Camden", "Amir", "Blake", "Alex", "Brody", "Malachi", "Emmanuel", "Jonah", "Beau", "Jude", "Antonio", "Alan", "Elliott", "Elliot", "Waylon", "Xander", "Timothy", "Victor", "Bryce", "Finn", "Brantley", "Edward", "Abraham", "Patrick", "Grant", "Karter", "Hayden", "Richard", "Miguel", "Joel", "Gael", "Tucker", "Rhett", "Avery", "Steven", "Graham", "Kaleb", "Jasper", "Jesse", "Matteo", "Dean", "Zayden", "Preston", "August", "Oscar", "Jeremy", "Alejandro", "Marcus", "Dawson", "Lorenzo", "Messiah", "Zion", "Maximus", "River", "Zane", "Mark", "Brooks", "Nicolas", "Paxton", "Judah", "Emiliano", "Kaden", "Bryan", "Kyle", "Myles", "Peter", "Charlie", "Kyrie", "Thiago", "Brian", "Kenneth", "Andres", "Lukas", "Aidan", "Jax", "Caden", "Milo", "Paul", "Beckett", "Brady", "Colin", "Omar", "Bradley", "Javier", "Knox", "Jaden", "Barrett", "Israel", "Matias", "Jorge", "Zander", "Derek", "Josue", "Cayden", "Holden", "Griffin", "Arthur", "Leon", "Felix", "Remington", "Jake", "Killian", "Clayton", "Sean", "Adriel", "Riley", "Archer", "Legend", "Erick", "Enzo", "Corbin", "Francisco", "Dallas", "Emilio", "Gunner", "Simon", "Andre", "Walter", "Damien", "Chance", "Phoenix", "Colt", "Tanner", "Stephen", "Kameron", "Tobias", "Manuel", "Amari", "Emerson", "Louis", "Cody", "Finley", "Iker", "Martin", "Rafael", "Nash", "Beckham", "Cash", "Karson", "Rylan", "Reid", "Theo", "Ace", "Eduardo", "Spencer", "Raymond", "Maximiliano", "Anderson", "Ronan", "Lane", "Cristian", "Titus", "Travis", "Jett", "Ricardo", "Bodhi", "Gideon", "Jaiden", "Fernando", "Mario", "Conor", "Keegan", "Ali", "Cesar", "Ellis", "Jayceon", "Walker", "Cohen", "Arlo", "Hector", "Dante", "Kyler", "Garrett", "Donovan", "Seth", "Jeffrey", "Tyson", "Jase", "Desmond", "Caiden", "Gage", "Atlas", "Major", "Devin", "Edwin", "Angelo", "Orion", "Conner", "Julius", "Marco", "Jensen", "Daxton", "Peyton", "Zayn", "Collin", "Jaylen", "Dakota", "Prince", "Johnny", "Kayson", "Cruz", "Hendrix", "Atticus", "Troy", "Kane", "Edgar", "Sergio", "Kash", "Marshall", "Johnathan", "Romeo", "Shane", "Warren", "Joaquin", "Wade", "Leonel", "Trevor", "Dominick", "Muhammad", "Erik", "Odin", "Quinn", "Jaxton", "Dalton", "Nehemiah", "Frank", "Grady", "Gregory", "Andy", "Solomon", "Malik", "Rory", "Clark", "Reed", "Harvey", "Zayne", "Jay", "Jared", "Noel", "Shawn", "Fabian", "Ibrahim", "Adonis", "Ismael", "Pedro", "Leland", "Malakai", "Malcolm", "Alexis", "Kason", "Porter", "Sullivan", "Raiden", "Allen", "Ari", "Russell", "Princeton", "Winston", "Kendrick", "Roberto", "Lennox", "Hayes", "Finnegan", "Nasir", "Kade", "Nico", "Emanuel", "Landen", "Moises", "Ruben", "Hugo", "Abram", "Adan", "Khalil", "Zaiden", "Augustus", "Marcos", "Philip", "Phillip", "Cyrus", "Esteban", "Braylen", "Albert", "Bruce", "Kamden", "Lawson", "Jamison", "Sterling", "Damon", "Gunnar", "Kyson", "Luka", "Franklin", "Ezequiel", "Pablo", "Derrick", "Zachariah", "Cade", "Jonas", "Dexter", "Kolton", "Remy", "Hank", "Tate", "Trenton", "Kian", "Drew", "Mohamed", "Dax", "Rocco", "Bowen", "Mathias", "Ronald", "Francis", "Matthias", "Milan", "Maximilian", "Royce", "Skyler", "Corey", "Kasen", "Drake", "Gerardo", "Jayson", "Sage", "Braylon", "Benson", "Moses", "Alijah", "Rhys", "Otto", "Oakley", "Armando" };
 
@@ -63,9 +62,6 @@ namespace TabelaFut
          * */
         public static void CriarCampeonato()
         {
-            EstadiosDisponiveis = _inst.dBEstadios.Estadios;
-            ArbitrosDisponiveis = _inst.dBArbitros.Arbitros;
-
             var rodadas = new List<LayoutRodadas>(19);
             var partidas = new List<LayoutPartidas>(190);
 
@@ -75,6 +71,22 @@ namespace TabelaFut
 
             for (int i = 0; i < 19; i++)
             {
+                /* Está pegando a referência e alterando o valor de _inst.dBArbitros.Arbitros, sendo que isso não deve ocorrer
+                EstadiosDisponiveis = _inst.dBEstadios.Estadios;
+                ArbitrosDisponiveis = _inst.dBArbitros.Arbitros; */
+
+                EstadiosDisponiveis = new List<LayoutEstadios>();
+                ArbitrosDisponiveis = new List<LayoutArbitros>();
+                for (int aux = 0; aux < _inst.dBEstadios.Estadios.Count; aux++)
+                {
+                    EstadiosDisponiveis.Add(_inst.dBEstadios.Estadios[aux]);
+                }
+
+                for (int aux = 0; aux < _inst.dBArbitros.Arbitros.Count; aux++)
+                {
+                    ArbitrosDisponiveis.Add(_inst.dBArbitros.Arbitros[aux]);
+                }
+
                 var rodada = new LayoutRodadas();
                 for (int j = 0; j < 10; j++)
                 {
@@ -130,6 +142,7 @@ namespace TabelaFut
                 {
                     estadioAtual = estadio;
                     EstadiosDisponiveis.Remove(estadio);
+                    break;
                 }
             }
 
@@ -143,12 +156,115 @@ namespace TabelaFut
 
             for (int i = 0; i < 4; i++)
             {
-                var index = rand.Next(ArbitrosDisponiveis.Count - 1);
+                var index = rand.Next(0, ArbitrosDisponiveis.Count);
                 arbitros.Add(ArbitrosDisponiveis[index]);
                 ArbitrosDisponiveis.RemoveAt(index);
             }
 
             return arbitros;
+        }
+
+        private List<LayoutTimes> GetTimes(string estadio)
+        {
+            var times = new List<LayoutTimes>();
+            
+            switch (estadio)
+            {
+                case "Arena da Baixada":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Athletico Paranaense")));
+                    }
+                    break;
+                case "Independência":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Atlético Mineiro")));
+                    }
+                    break;
+                case "Ressacada":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Avaí")));
+                    }
+                    break;
+                case "Arena Fonte Nova":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Bahia")));
+                    }
+                    break;
+                case "Nilton Santos":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Botafogo")));
+                    }
+                    break;
+                case "Arena Castelão":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Ceará")));
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Fortaleza")));
+                    }
+                    break;
+                case "Arena Condá":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Chapecoense")));
+                    }
+                    break;
+                case "Arena Corinthians":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Corinthians")));
+                    }
+                    break;
+                case "Mineirão":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Cruzeiro")));
+                    }
+                    break;
+                case "Rei Pelé":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("CSA")));
+                    }
+                    break;
+                case "Maracanã":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Flamengo")));
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Fluminense")));
+                    }
+                    break;
+                case "Serra Dourada":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Goiás")));
+                    }
+                    break;
+                case "Arena do Grêmio":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Grêmio")));
+                    }
+                    break;
+                case "Beira-Rio":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Internacional")));
+                    }
+                    break;
+                case "Allianz Parque":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Palmeiras")));
+                    }
+                    break;
+                case "Vila Belmiro":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Santos")));
+                    }
+                    break;
+                case "Morumbi":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("São Paulo")));
+                    }
+                    break;
+                case "São Januário":
+                    {
+                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Vasco da Gama")));
+                    }
+                    break;
+            }
+            
+            return times;
         }
 
         public static Manager Instance => _inst;
@@ -193,7 +309,7 @@ namespace TabelaFut
         public void CarregarEstadiosDefault()
         {
             dBEstadios.Estadios.Clear();
-            //{ "Arena da Baixada", "Independência", "Ressacada", "Arena Fonte Nova", "Nilton Santos", "Arena Castelão", "Arena Condá", "Arena Corinthians", "Mineirão", "Rei Pelé", "Maracanã", "Serra Dourada", "Arena do Grêmio", "Beira-Rio", "Allianz Parque", "Vila Belmiro", "Morumbi", "São Januário" };
+
             foreach (var estadio in _estadios)
             {
                 var times = new List<LayoutTimes>();
@@ -201,7 +317,8 @@ namespace TabelaFut
                 dBEstadios.Estadios.Add(new LayoutEstadios()
                 {
                     ID = ++dBEstadios.UltimoID,
-                    Nome = estadio
+                    Nome = estadio,
+                    Times = GetTimes(estadio)
                 });
             }
 
