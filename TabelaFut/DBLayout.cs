@@ -78,7 +78,11 @@ namespace TabelaFut
     {
         public static void Serialize<T>(T obj)
         {
-            File.WriteAllText($"{Application.StartupPath}\\{obj.GetType().Name}.json", JsonConvert.SerializeObject(obj, Formatting.Indented));
+            try
+            {
+                File.WriteAllText($"{Application.StartupPath}\\{obj.GetType().Name}.json", JsonConvert.SerializeObject(obj, Formatting.Indented));
+            }
+            catch { }
         }
 
         public static T Deserialize<T>()
