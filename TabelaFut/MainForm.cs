@@ -162,5 +162,38 @@ namespace TabelaFut
             var frm = new frmGerenciarEstadios();
             frm.ShowDialog();
         }
+
+        private void btnJogarTodasRodadas(object sender, EventArgs e)
+        {
+            if (Manager.Instance.dBRodadas.Rodadas.Any(r => !r.FoiJogada))
+            {
+                Manager.JogarTodasRodadas();
+            }
+            else
+            {
+                TodasAsRodadasJaForamJogadas();
+            }
+        }
+
+        private void btnJogadProximaRodada(object sender, EventArgs e)
+        {
+            var rodada = Manager.Instance.dBRodadas.Rodadas.FirstOrDefault(x => !x.FoiJogada);
+            if (rodada == null)
+            {
+                TodasAsRodadasJaForamJogadas();
+                return;
+            }
+
+            Manager.JogarRodada(rodada);
+        }
+
+
+        private static void TodasAsRodadasJaForamJogadas()
+        {
+            var msgBox = new CustomMsgBox("Alerta", $"Todas as rodadas já foram jogadas.", MessageBoxType.E_OK);
+            var result = msgBox.ShowDialog();
+        }
+
+
     }
 }

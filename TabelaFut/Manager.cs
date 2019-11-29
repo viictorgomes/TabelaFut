@@ -47,7 +47,7 @@ namespace TabelaFut
 
         private static Manager _inst;
 
-        private Random rand = new Random();
+        private static Random rand = new Random();
 
         public static Manager Instance => _inst;
         public static string[] TimesDefault => _inst._times;
@@ -174,6 +174,135 @@ namespace TabelaFut
 
             DBManager.Serialize(dBRodadas);
             DBManager.Serialize(dBPartidas);
+        }
+        
+        public static void JogarTodasRodadas()
+        {
+            var rodadas = _inst.dBRodadas.Rodadas;
+
+            foreach (var rodada in rodadas)
+            {
+                if (!rodada.FoiJogada)
+                {
+                    JogarRodada(rodada);
+                }
+            }
+        }
+
+        public static void JogarRodada(LayoutRodadas rodada)
+        {
+            if (rodada.FoiJogada)
+                return;
+
+            foreach (var partida in rodada.Partidas)
+            {
+                partida.GolsTimeA = GetGolsDoTime(true);
+                partida.GolsTimeB = GetGolsDoTime(false);
+                
+                if (partida.GolsTimeA != partida.GolsTimeB)
+                {
+                    LayoutTimes timeVencedor;
+                    LayoutTimes timePerdedor;
+                    int golsVencedor;
+                    int golsPerdedor;
+
+                    if (partida.GolsTimeA > partida.GolsTimeB)
+                    {
+                        timeVencedor = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
+                        timePerdedor = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
+                        golsVencedor = partida.GolsTimeA;
+                        golsPerdedor = partida.GolsTimeB;
+                    }
+                    else
+                    {
+                        timeVencedor = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
+                        timePerdedor = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
+                        golsVencedor = partida.GolsTimeB;
+                        golsPerdedor = partida.GolsTimeA;
+                    }
+
+                    partida.TimeVencedor = timeVencedor;
+
+                    timeVencedor.Vitorias++;
+                    timePerdedor.Derrotas++;
+
+                    timeVencedor.Pontos += 3;
+
+                    timeVencedor.GolsFeitos += golsVencedor;
+                    timeVencedor.GolsSofridos += golsPerdedor;
+                    timeVencedor.SaldoDeGols = timeVencedor.GolsFeitos - timeVencedor.GolsSofridos;
+
+                    timePerdedor.GolsFeitos += golsPerdedor;
+                    timePerdedor.GolsSofridos += golsVencedor;
+                    timePerdedor.SaldoDeGols = timePerdedor.GolsFeitos - timePerdedor.GolsSofridos;
+
+                }
+                else
+                {
+                    var timeA = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
+                    var timeB = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
+
+                    timeA.Empates++;
+                    timeB.Empates++;
+
+                    timeA.Pontos++;
+                    timeB.Pontos++;
+
+                    timeA.GolsFeitos += partida.GolsTimeA;
+                    timeA.GolsSofridos += partida.GolsTimeB;
+
+                    timeB.GolsFeitos += partida.GolsTimeB;
+                    timeB.GolsSofridos += partida.GolsTimeA;
+
+                }
+            }
+
+            rodada.FoiJogada = true;
+
+            DBManager.Serialize(_inst.dBPartidas);
+            DBManager.Serialize(_inst.dBRodadas);
+        }
+
+        private static int GetGolsDoTime(bool ehTimeMandante)
+        {
+            var golsTimeMandante = new List<int>();
+            
+            golsTimeMandante.AddRange(CriarProbabilidadeDeGols(0, 4));
+            golsTimeMandante.AddRange(CriarProbabilidadeDeGols(1, 5));
+            golsTimeMandante.AddRange(CriarProbabilidadeDeGols(2, 5));
+            golsTimeMandante.AddRange(CriarProbabilidadeDeGols(3, 3));
+            golsTimeMandante.AddRange(CriarProbabilidadeDeGols(4, 2));
+            golsTimeMandante.AddRange(CriarProbabilidadeDeGols(5, 1));
+
+            var golsTimeVisitante = new List<int>();
+
+            golsTimeVisitante.AddRange(CriarProbabilidadeDeGols(0, 5));
+            golsTimeVisitante.AddRange(CriarProbabilidadeDeGols(1, 4));
+            golsTimeVisitante.AddRange(CriarProbabilidadeDeGols(2, 3));
+            golsTimeVisitante.AddRange(CriarProbabilidadeDeGols(3, 3));
+            golsTimeVisitante.AddRange(CriarProbabilidadeDeGols(4, 2));
+            golsTimeVisitante.AddRange(CriarProbabilidadeDeGols(5, 1));
+
+            if (ehTimeMandante)
+            {
+                int index = rand.Next(golsTimeMandante.Count - 1);
+                return golsTimeMandante[index];
+            }
+            else
+            {
+                int index = rand.Next(golsTimeVisitante.Count - 1);
+                return golsTimeVisitante[index];
+            }
+        }
+
+        private static List<int> CriarProbabilidadeDeGols(int quantidade, int probabilidade)
+        {
+            var list = new List<int>();
+            for (int i = 0; i < probabilidade; i++)
+            {
+                list.Add(quantidade);
+            }
+            return list;
         }
 
         private static LayoutEstadios GetEstadio(LayoutTimes timeA, LayoutTimes timeB)
