@@ -172,6 +172,39 @@ namespace TabelaFut
             frm.ShowDialog();
         }
 
+        private void btnJogarTodasRodadas(object sender, EventArgs e)
+        {
+            if (Manager.Instance.dBRodadas.Rodadas.Any(r => !r.FoiJogada))
+            {
+                Manager.Instance.JogarTodasRodadas();
+            }
+            else
+            {
+                TodasAsRodadasJaForamJogadas();
+            }
+        }
+
+        private void btnJogadProximaRodada(object sender, EventArgs e)
+        {
+            var rodada = Manager.Instance.dBRodadas.Rodadas.FirstOrDefault(x => !x.FoiJogada);
+            if (rodada == null)
+            {
+                TodasAsRodadasJaForamJogadas();
+                return;
+            }
+
+            Manager.Instance.JogarRodada(rodada);
+        }
+
+
+        private static void TodasAsRodadasJaForamJogadas()
+        {
+            var msgBox = new CustomMsgBox("Alerta", $"Todas as rodadas já foram jogadas.", MessageBoxType.E_OK);
+            var result = msgBox.ShowDialog();
+        }
+
+
+
         private void AlterarPaginaPartida(int Pag)
         {
             RefreshPartidas(Pag);

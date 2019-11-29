@@ -140,6 +140,7 @@ namespace TabelaFut
     {
         public int ID;
         public int Rodada;
+        public bool FoiJogada;
         public List<LayoutPartidas> Partidas = new List<LayoutPartidas>(10);
     }
 }

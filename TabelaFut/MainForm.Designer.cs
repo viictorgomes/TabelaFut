@@ -281,6 +281,7 @@
             this.SaldoDeGols});
             this.lvClassificacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lvClassificacoes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvClassificacoes.HideSelection = false;
             this.lvClassificacoes.Location = new System.Drawing.Point(-4, 6);
             this.lvClassificacoes.MultiSelect = false;
             this.lvClassificacoes.Name = "lvClassificacoes";
@@ -1053,7 +1054,7 @@
             this.btn_ProxPag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.btn_ProxPag.FlatAppearance.BorderSize = 0;
             this.btn_ProxPag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ProxPag.Font = new System.Drawing.Font("Roboto", 11F);
+            this.btn_ProxPag.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btn_ProxPag.ForeColor = System.Drawing.Color.White;
             this.btn_ProxPag.Location = new System.Drawing.Point(389, 460);
             this.btn_ProxPag.Name = "btn_ProxPag";
@@ -1068,7 +1069,7 @@
             this.btn_PagAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.btn_PagAnterior.FlatAppearance.BorderSize = 0;
             this.btn_PagAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PagAnterior.Font = new System.Drawing.Font("Roboto", 11F);
+            this.btn_PagAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btn_PagAnterior.ForeColor = System.Drawing.Color.White;
             this.btn_PagAnterior.Location = new System.Drawing.Point(329, 460);
             this.btn_PagAnterior.Name = "btn_PagAnterior";
@@ -1220,7 +1221,7 @@
             // 
             this.btnGerenciarEstadios.FlatAppearance.BorderSize = 0;
             this.btnGerenciarEstadios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarEstadios.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGerenciarEstadios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnGerenciarEstadios.Image = global::TabelaFut.Properties.Resources.estadio100px;
             this.btnGerenciarEstadios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGerenciarEstadios.Location = new System.Drawing.Point(99, 201);
@@ -1236,7 +1237,7 @@
             // 
             this.btnGerenciarTimes.FlatAppearance.BorderSize = 0;
             this.btnGerenciarTimes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarTimes.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGerenciarTimes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnGerenciarTimes.Image = global::TabelaFut.Properties.Resources.times100px;
             this.btnGerenciarTimes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGerenciarTimes.Location = new System.Drawing.Point(99, 32);
@@ -1254,8 +1255,9 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(174, 127);
             this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
+            this.button8.Text = "Jogar próxima rodada";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.btnJogadProximaRodada);
             // 
             // button9
             // 
@@ -1263,8 +1265,9 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(174, 127);
             this.button9.TabIndex = 8;
-            this.button9.Text = "button9";
+            this.button9.Text = "Jogar rodadas restantes";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.btnJogarTodasRodadas);
             // 
             // button7
             // 
@@ -1279,7 +1282,7 @@
             // 
             this.btnGerenciarArbitros.FlatAppearance.BorderSize = 0;
             this.btnGerenciarArbitros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarArbitros.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGerenciarArbitros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnGerenciarArbitros.Image = global::TabelaFut.Properties.Resources.arbitros100px;
             this.btnGerenciarArbitros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGerenciarArbitros.Location = new System.Drawing.Point(493, 32);
@@ -1295,7 +1298,7 @@
             // 
             this.btnGerenciarJogadores.FlatAppearance.BorderSize = 0;
             this.btnGerenciarJogadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarJogadores.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGerenciarJogadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnGerenciarJogadores.Image = global::TabelaFut.Properties.Resources.jogador100px;
             this.btnGerenciarJogadores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGerenciarJogadores.Location = new System.Drawing.Point(298, 32);
@@ -1342,11 +1345,11 @@
             // 
             this.lbl_TabelaFut.AutoSize = true;
             this.lbl_TabelaFut.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_TabelaFut.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbl_TabelaFut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_TabelaFut.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_TabelaFut.Location = new System.Drawing.Point(4, 2);
             this.lbl_TabelaFut.Name = "lbl_TabelaFut";
-            this.lbl_TabelaFut.Size = new System.Drawing.Size(75, 19);
+            this.lbl_TabelaFut.Size = new System.Drawing.Size(73, 18);
             this.lbl_TabelaFut.TabIndex = 2;
             this.lbl_TabelaFut.Text = "TabelaFut";
             // 
