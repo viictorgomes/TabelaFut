@@ -44,7 +44,7 @@ namespace TabelaFut
             lvClassificacoes.Sort();
         }
 
-        private void RefreshListView()
+        private void RefreshClassificacao()
         {
             lvClassificacoes.Items.Clear();
 
@@ -95,9 +95,37 @@ namespace TabelaFut
 
         }
 
+        private void RefreshPartidas(int Rodada)
+        {
+            int index = 0;
+
+            var rodada = Manager.Instance.dBRodadas.Rodadas.Find(x => x.ID == Rodada);
+
+            foreach (var partida in rodada.Partidas)
+            {
+                index = partida.ID;
+
+                if (index <= 10)
+                {
+                    var lblTimeA = Controls.Find($"TimeA_{index}", true).FirstOrDefault() as Label;
+                    var lblTimeB = Controls.Find($"TimeB_{index}", true).FirstOrDefault() as Label;
+                    var lblGolsTimeA = Controls.Find($"GolsTimeA_{index}", true).FirstOrDefault() as Label;
+                    var lblGolsTimeB = Controls.Find($"GolsTimeB_{index}", true).FirstOrDefault() as Label;
+
+                    lblTimeA.Text = partida.TimeA.Nome;
+                    lblTimeB.Text = partida.TimeB.Nome;
+                    lblGolsTimeA.Text = partida.GolsTimeA.ToString();
+                    lblGolsTimeB.Text = partida.GolsTimeB.ToString();
+                }
+            }
+
+            lblRodada.Text = $"Rodada {Rodada} de 20";
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            RefreshListView();
+            RefreshClassificacao();
+            RefreshPartidas(1);
         }
 
         private void LvClassificacoes_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -114,7 +142,7 @@ namespace TabelaFut
 
         private void materialTabSelector1_Click(object sender, EventArgs e)
         {
-            RefreshListView();
+            RefreshClassificacao();
         }
 
         private void btnGerenciarArbitros_Click(object sender, EventArgs e)

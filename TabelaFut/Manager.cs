@@ -49,6 +49,19 @@ namespace TabelaFut
 
         private Random rand = new Random();
 
+        public static Manager Instance => _inst;
+        public static string[] TimesDefault => _inst._times;
+        public static string[] JogadoresDefault => _inst._jogadores;
+        public static string[] ArbitrosDefault => _inst._arbitros;
+
+        public DBTimes dBTimes = new DBTimes();
+        public DBEstadios dBEstadios = new DBEstadios();
+        public DBJogadores dBJogadores = new DBJogadores();
+        public DBArbitros dBArbitros = new DBArbitros();
+
+        public DBPartidas dBPartidas = new DBPartidas();
+        public DBRodadas dBRodadas = new DBRodadas();
+
         public static void Initialize()
         {
             if (_inst != null)
@@ -59,6 +72,8 @@ namespace TabelaFut
             _inst.dBJogadores = DBManager.Deserialize<DBJogadores>();
             _inst.dBTimes = DBManager.Deserialize<DBTimes>();
             _inst.dBArbitros = DBManager.Deserialize<DBArbitros>();
+            _inst.dBRodadas = DBManager.Deserialize<DBRodadas>();
+            _inst.dBPartidas = DBManager.Deserialize<DBPartidas>();
 
             if (_inst.dBEstadios.Estadios.Count == 0)
                 _inst.CarregarEstadiosDefault();
@@ -72,7 +87,8 @@ namespace TabelaFut
             if (_inst.dBArbitros.Arbitros.Count == 0)
                 _inst.CarregarArbitrosDefault();
 
-            CriarCampeonato();
+            if(_inst.dBRodadas.Rodadas.Count == 0 && _inst.dBPartidas.Partidas.Count == 0)
+                _inst.CriarCampeonato();
         }
 
         public static List<LayoutEstadios> EstadiosDisponiveis;
@@ -84,8 +100,11 @@ namespace TabelaFut
          * Randomizar 1 jogador do time por cada gol feito;
          * Preencher o estadio das partidas de acordo com as restrições;     --FEITO
          * */
-        public static void CriarCampeonato()
+        public void CriarCampeonato()
         {
+            dBRodadas.Rodadas.Clear();
+            dBPartidas.Partidas.Clear();
+
             var rodadas = new List<LayoutRodadas>(19);
             var partidas = new List<LayoutPartidas>(190);
 
@@ -115,12 +134,13 @@ namespace TabelaFut
                     rodada.Rodada = i + 1;
                     var partida = new LayoutPartidas
                     {
+                        ID = ++dBPartidas.UltimoID,
                         TimeA = timesA[j],
                         TimeB = timesB[j],
                         Arbitros = GetArbitros(),
                         Estadio = GetEstadio(timesA[j], timesB[j])
                     };
-
+                    dBPartidas.Partidas.Add(partida);
                     rodada.Partidas.Add(partida);
                 }
 
@@ -146,8 +166,14 @@ namespace TabelaFut
                 {
                     timesB[k] = antigoTimesB[k + 1];
                 }
+
+                rodada.ID = ++dBRodadas.UltimoID;
                 rodadas.Add(rodada);
+                dBRodadas.Rodadas.Add(rodada);
             }
+
+            DBManager.Serialize(dBRodadas);
+            DBManager.Serialize(dBPartidas);
         }
 
         private static LayoutEstadios GetEstadio(LayoutTimes timeA, LayoutTimes timeB)
@@ -284,16 +310,6 @@ namespace TabelaFut
             
             return times;
         }
-
-        public static Manager Instance => _inst;
-        public static string[] TimesDefault => _inst._times;
-        public static string[] JogadoresDefault => _inst._jogadores;
-        public static string[] ArbitrosDefault => _inst._arbitros;
-
-        public DBTimes dBTimes = new DBTimes();
-        public DBEstadios dBEstadios = new DBEstadios();
-        public DBJogadores dBJogadores = new DBJogadores();
-        public DBArbitros dBArbitros = new DBArbitros();
 
         public void CarregarTimesDefault()
         {
