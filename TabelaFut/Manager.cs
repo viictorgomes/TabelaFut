@@ -197,9 +197,7 @@ namespace TabelaFut
             if (rodada.FoiJogada)
                 return;
 
-            var _rodada = dBRodadas.Rodadas.Find(r => r.Rodada == rodada.ID);
-
-            foreach (var partidaDb in _rodada.Partidas)
+            foreach (var partidaDb in dBRodadas.Rodadas.Find(r => r.Rodada == rodada.ID).Partidas)
             {
                 var partida = dBPartidas.Partidas.Find(p => p.ID == partidaDb.ID);
 

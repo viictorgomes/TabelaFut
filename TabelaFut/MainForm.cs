@@ -137,25 +137,18 @@ namespace TabelaFut
 
         private void RefreshPartidasPorTime(int Time, bool segundaPagina = false)
         {
-            int index = segundaPagina ? 9 : 0;
+            int index = segundaPagina ? 10 : 0;
 
             var time = Manager.Instance.dBTimes.Times.Find(x => x.ID == Time);
             var partidas = Manager.Instance.dBPartidas.Partidas.Where(x => x.TimeA.ID == time.ID || x.TimeB.ID == time.ID).ToList();
-
-            List<LayoutPartidas> Partidas = new List<LayoutPartidas>();
-            foreach (var partida in partidas)
-            {
-                Partidas.Add(partida);
-            }
-
-
-            foreach (var partida in Partidas)
+            int length = index + (segundaPagina ? 9 : 10);
+            for (int i = index; i < length; i++)
             {
                 index = ++index;
 
                 if (index > 10)
                 {
-                    index = partida.ID % 10;
+                    index = partidas[i].ID % 10;
                     if (index == 0)
                     {
                         index = 10;
@@ -168,11 +161,11 @@ namespace TabelaFut
                 var lblGolsTimeB = Controls.Find($"GolsTimeB_{index}", true).FirstOrDefault() as Label;
                 var lblIDPartida = Controls.Find($"IDPartida_{index}", true).FirstOrDefault() as Label;
 
-                lblTimeA.Text = partida.TimeA.Nome;
-                lblTimeB.Text = partida.TimeB.Nome;
-                lblGolsTimeA.Text = partida.GolsTimeA.ToString();
-                lblGolsTimeB.Text = partida.GolsTimeB.ToString();
-                lblIDPartida.Text = partida.ID.ToString();
+                lblTimeA.Text = partidas[i].TimeA.Nome;
+                lblTimeB.Text = partidas[i].TimeB.Nome;
+                lblGolsTimeA.Text = partidas[i].GolsTimeA.ToString();
+                lblGolsTimeB.Text = partidas[i].GolsTimeB.ToString();
+                lblIDPartida.Text = partidas[i].ID.ToString();
                 lblIDPartida.Hide();
             }
 

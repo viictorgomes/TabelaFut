@@ -106,7 +106,6 @@ namespace TabelaFut.Forms
             lbl_ID.Text = $"ID: {jogador.ID.ToString()}";
             lbl_Idade.Text = $"Idade: {jogador.Idade.ToString()}";
             lbl_Altura.Text = $"Altura: {jogador.Altura.ToString()}";
-            lbl_Gols.Text = $"Gols: {jogador.Gols.ToString()}";
             lbl_TimeAtual.Text = $"Time Atual: {EncontrarTime(jogador.ID)}";
         }
 
