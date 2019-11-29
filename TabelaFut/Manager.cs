@@ -176,9 +176,9 @@ namespace TabelaFut
             DBManager.Serialize(dBPartidas);
         }
         
-        public static void JogarTodasRodadas()
+        public void JogarTodasRodadas()
         {
-            var rodadas = _inst.dBRodadas.Rodadas;
+            var rodadas = dBRodadas.Rodadas;
 
             foreach (var rodada in rodadas)
             {
@@ -189,12 +189,14 @@ namespace TabelaFut
             }
         }
 
-        public static void JogarRodada(LayoutRodadas rodada)
+        public void JogarRodada(LayoutRodadas rodada)
         {
             if (rodada.FoiJogada)
                 return;
 
-            foreach (var partida in rodada.Partidas)
+            var _rodada = dBRodadas.Rodadas.Find(r => r.Rodada == rodada.ID);
+
+            foreach (var partida in _rodada.Partidas)
             {
                 partida.GolsTimeA = GetGolsDoTime(true);
                 partida.GolsTimeB = GetGolsDoTime(false);
@@ -208,15 +210,15 @@ namespace TabelaFut
 
                     if (partida.GolsTimeA > partida.GolsTimeB)
                     {
-                        timeVencedor = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
-                        timePerdedor = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
+                        timeVencedor = dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
+                        timePerdedor = dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
                         golsVencedor = partida.GolsTimeA;
                         golsPerdedor = partida.GolsTimeB;
                     }
                     else
                     {
-                        timeVencedor = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
-                        timePerdedor = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
+                        timeVencedor = dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
+                        timePerdedor = dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
                         golsVencedor = partida.GolsTimeB;
                         golsPerdedor = partida.GolsTimeA;
                     }
@@ -239,8 +241,8 @@ namespace TabelaFut
                 }
                 else
                 {
-                    var timeA = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
-                    var timeB = _inst.dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
+                    var timeA = dBTimes.Times.Find(x => x.ID == partida.TimeA.ID);
+                    var timeB = dBTimes.Times.Find(x => x.ID == partida.TimeB.ID);
 
                     timeA.Empates++;
                     timeB.Empates++;
@@ -259,11 +261,12 @@ namespace TabelaFut
 
             rodada.FoiJogada = true;
 
-            DBManager.Serialize(_inst.dBPartidas);
-            DBManager.Serialize(_inst.dBRodadas);
+            DBManager.Serialize(dBTimes);
+            DBManager.Serialize(dBPartidas);
+            DBManager.Serialize(dBRodadas);
         }
 
-        private static int GetGolsDoTime(bool ehTimeMandante)
+        private int GetGolsDoTime(bool ehTimeMandante)
         {
             var golsTimeMandante = new List<int>();
             
@@ -295,7 +298,7 @@ namespace TabelaFut
             }
         }
 
-        private static List<int> CriarProbabilidadeDeGols(int quantidade, int probabilidade)
+        private List<int> CriarProbabilidadeDeGols(int quantidade, int probabilidade)
         {
             var list = new List<int>();
             for (int i = 0; i < probabilidade; i++)

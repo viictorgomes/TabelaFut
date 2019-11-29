@@ -167,7 +167,7 @@ namespace TabelaFut
         {
             if (Manager.Instance.dBRodadas.Rodadas.Any(r => !r.FoiJogada))
             {
-                Manager.JogarTodasRodadas();
+                Manager.Instance.JogarTodasRodadas();
             }
             else
             {
@@ -184,7 +184,7 @@ namespace TabelaFut
                 return;
             }
 
-            Manager.JogarRodada(rodada);
+            Manager.Instance.JogarRodada(rodada);
         }
 
 
