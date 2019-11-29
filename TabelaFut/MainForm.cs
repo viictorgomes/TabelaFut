@@ -128,5 +128,11 @@ namespace TabelaFut
             var frm = new frmGerenciarJogadores();
             frm.ShowDialog();
         }
+
+        private void btnGerenciarEstadios_Click(object sender, EventArgs e)
+        {
+            var frm = new frmGerenciarEstadios();
+            frm.ShowDialog();
+        }
     }
 }

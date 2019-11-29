@@ -122,6 +122,8 @@ namespace TabelaFut
             if (result == DialogResult.OK)
             {
                 Manager.Instance.dBTimes.Times.Remove(remover);
+                Manager.Instance.dBEstadios.Estadios.Find(x => x.ID == id).IDTimes.Remove(id);
+
                 DBManager.Serialize(Manager.Instance.dBTimes);
 
                 var infoMsgBox = new CustomMsgBox("Informações Atualizadas!", $"Time {remover.Nome} removido com sucesso.", MessageBoxType.E_CancelarConfirmar);

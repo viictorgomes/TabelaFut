@@ -63,7 +63,7 @@ namespace TabelaFut
                 Manager.Instance.dBTimes.Times.Add(_time);
             }
 
-            var infoMsgBox = new CustomMsgBox("Informações Atualizadas!", $"Informações de árbitros atualizadas com sucesso!", MessageBoxType.E_OK);
+            var infoMsgBox = new CustomMsgBox("Informações Atualizadas!", $"Informações de times atualizadas com sucesso!", MessageBoxType.E_OK);
             var infoResult = infoMsgBox.ShowDialog();
 
             DBManager.Serialize(Manager.Instance.dBTimes);

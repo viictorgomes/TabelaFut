@@ -33,13 +33,9 @@
             this.tabClassificacao = new System.Windows.Forms.TabPage();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.lblLegenda4 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblLegenda3 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblLegenda2 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblLegenda1 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lvClassificacoes = new System.Windows.Forms.ListView();
             this.Spacer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Colocacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -53,24 +49,28 @@
             this.SaldoDeGols = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabEstatisticas = new System.Windows.Forms.TabPage();
             this.tabGerenciamento = new System.Windows.Forms.TabPage();
-            this.btnGerenciarTimes = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.btnGerenciarArbitros = new System.Windows.Forms.Button();
-            this.btnGerenciarJogadores = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.lbl_TabelaFut = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnGerenciarEstadios = new System.Windows.Forms.Button();
+            this.btnGerenciarTimes = new System.Windows.Forms.Button();
+            this.btnGerenciarArbitros = new System.Windows.Forms.Button();
+            this.btnGerenciarJogadores = new System.Windows.Forms.Button();
             this.materialTabControl1.SuspendLayout();
             this.tabClassificacao.SuspendLayout();
+            this.tabGerenciamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabGerenciamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -130,15 +130,6 @@
             this.lblLegenda4.TabIndex = 8;
             this.lblLegenda4.Text = "Rebaixamento";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
-            this.pictureBox3.Location = new System.Drawing.Point(324, 484);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // lblLegenda3
             // 
             this.lblLegenda3.AutoSize = true;
@@ -151,15 +142,6 @@
             this.lblLegenda3.Size = new System.Drawing.Size(271, 19);
             this.lblLegenda3.TabIndex = 6;
             this.lblLegenda3.Text = "Fase de grupos da Copa Sul-Americana";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(83)))));
-            this.pictureBox4.Location = new System.Drawing.Point(324, 459);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
             // 
             // lblLegenda2
             // 
@@ -174,15 +156,6 @@
             this.lblLegenda2.TabIndex = 4;
             this.lblLegenda2.Text = "Qualificatórias da Copa Libertadores";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(123)))), ((int)(((byte)(23)))));
-            this.pictureBox2.Location = new System.Drawing.Point(9, 484);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // lblLegenda1
             // 
             this.lblLegenda1.AutoSize = true;
@@ -195,15 +168,6 @@
             this.lblLegenda1.Size = new System.Drawing.Size(258, 19);
             this.lblLegenda1.TabIndex = 2;
             this.lblLegenda1.Text = "Fase de grupos da Copa Libertadores";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 459);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lvClassificacoes
             // 
@@ -300,6 +264,7 @@
             // 
             // tabGerenciamento
             // 
+            this.tabGerenciamento.Controls.Add(this.btnGerenciarEstadios);
             this.tabGerenciamento.Controls.Add(this.btnGerenciarTimes);
             this.tabGerenciamento.Controls.Add(this.button8);
             this.tabGerenciamento.Controls.Add(this.button9);
@@ -308,7 +273,6 @@
             this.tabGerenciamento.Controls.Add(this.btnGerenciarJogadores);
             this.tabGerenciamento.Controls.Add(this.button5);
             this.tabGerenciamento.Controls.Add(this.button6);
-            this.tabGerenciamento.Controls.Add(this.button4);
             this.tabGerenciamento.ForeColor = System.Drawing.Color.Black;
             this.tabGerenciamento.Location = new System.Drawing.Point(4, 22);
             this.tabGerenciamento.Name = "tabGerenciamento";
@@ -317,22 +281,6 @@
             this.tabGerenciamento.TabIndex = 1;
             this.tabGerenciamento.Text = "Gerenciamento";
             this.tabGerenciamento.UseVisualStyleBackColor = true;
-            // 
-            // btnGerenciarTimes
-            // 
-            this.btnGerenciarTimes.FlatAppearance.BorderSize = 0;
-            this.btnGerenciarTimes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarTimes.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.btnGerenciarTimes.Image = global::TabelaFut.Properties.Resources.times100px;
-            this.btnGerenciarTimes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGerenciarTimes.Location = new System.Drawing.Point(99, 32);
-            this.btnGerenciarTimes.Name = "btnGerenciarTimes";
-            this.btnGerenciarTimes.Size = new System.Drawing.Size(174, 127);
-            this.btnGerenciarTimes.TabIndex = 0;
-            this.btnGerenciarTimes.Text = "Gerenciar Times";
-            this.btnGerenciarTimes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGerenciarTimes.UseVisualStyleBackColor = true;
-            this.btnGerenciarTimes.Click += new System.EventHandler(this.btnGerenciarTimes_Click);
             // 
             // button8
             // 
@@ -361,38 +309,6 @@
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // btnGerenciarArbitros
-            // 
-            this.btnGerenciarArbitros.FlatAppearance.BorderSize = 0;
-            this.btnGerenciarArbitros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarArbitros.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.btnGerenciarArbitros.Image = global::TabelaFut.Properties.Resources.arbitros100px;
-            this.btnGerenciarArbitros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGerenciarArbitros.Location = new System.Drawing.Point(493, 32);
-            this.btnGerenciarArbitros.Name = "btnGerenciarArbitros";
-            this.btnGerenciarArbitros.Size = new System.Drawing.Size(174, 127);
-            this.btnGerenciarArbitros.TabIndex = 2;
-            this.btnGerenciarArbitros.Text = "Gerenciar Árbitros";
-            this.btnGerenciarArbitros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGerenciarArbitros.UseVisualStyleBackColor = true;
-            this.btnGerenciarArbitros.Click += new System.EventHandler(this.btnGerenciarArbitros_Click);
-            // 
-            // btnGerenciarJogadores
-            // 
-            this.btnGerenciarJogadores.FlatAppearance.BorderSize = 0;
-            this.btnGerenciarJogadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciarJogadores.Font = new System.Drawing.Font("Roboto", 11F, System.Drawing.FontStyle.Bold);
-            this.btnGerenciarJogadores.Image = global::TabelaFut.Properties.Resources.jogador100px;
-            this.btnGerenciarJogadores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGerenciarJogadores.Location = new System.Drawing.Point(298, 32);
-            this.btnGerenciarJogadores.Name = "btnGerenciarJogadores";
-            this.btnGerenciarJogadores.Size = new System.Drawing.Size(174, 127);
-            this.btnGerenciarJogadores.TabIndex = 1;
-            this.btnGerenciarJogadores.Text = "Gerenciar Jogadores";
-            this.btnGerenciarJogadores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGerenciarJogadores.UseVisualStyleBackColor = true;
-            this.btnGerenciarJogadores.Click += new System.EventHandler(this.btnGerenciarJogadores_Click);
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(298, 201);
@@ -410,15 +326,6 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(99, 201);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 127);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // materialTabSelector1
             // 
@@ -445,6 +352,106 @@
             this.lbl_TabelaFut.TabIndex = 2;
             this.lbl_TabelaFut.Text = "TabelaFut";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
+            this.pictureBox3.Location = new System.Drawing.Point(324, 484);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(83)))));
+            this.pictureBox4.Location = new System.Drawing.Point(324, 459);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(123)))), ((int)(((byte)(23)))));
+            this.pictureBox2.Location = new System.Drawing.Point(9, 484);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 459);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnGerenciarEstadios
+            // 
+            this.btnGerenciarEstadios.FlatAppearance.BorderSize = 0;
+            this.btnGerenciarEstadios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerenciarEstadios.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGerenciarEstadios.Image = global::TabelaFut.Properties.Resources.estadio100px;
+            this.btnGerenciarEstadios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGerenciarEstadios.Location = new System.Drawing.Point(99, 201);
+            this.btnGerenciarEstadios.Name = "btnGerenciarEstadios";
+            this.btnGerenciarEstadios.Size = new System.Drawing.Size(174, 127);
+            this.btnGerenciarEstadios.TabIndex = 9;
+            this.btnGerenciarEstadios.Text = "Gerenciar Estádios";
+            this.btnGerenciarEstadios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGerenciarEstadios.UseVisualStyleBackColor = true;
+            this.btnGerenciarEstadios.Click += new System.EventHandler(this.btnGerenciarEstadios_Click);
+            // 
+            // btnGerenciarTimes
+            // 
+            this.btnGerenciarTimes.FlatAppearance.BorderSize = 0;
+            this.btnGerenciarTimes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerenciarTimes.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGerenciarTimes.Image = global::TabelaFut.Properties.Resources.times100px;
+            this.btnGerenciarTimes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGerenciarTimes.Location = new System.Drawing.Point(99, 32);
+            this.btnGerenciarTimes.Name = "btnGerenciarTimes";
+            this.btnGerenciarTimes.Size = new System.Drawing.Size(174, 127);
+            this.btnGerenciarTimes.TabIndex = 0;
+            this.btnGerenciarTimes.Text = "Gerenciar Times";
+            this.btnGerenciarTimes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGerenciarTimes.UseVisualStyleBackColor = true;
+            this.btnGerenciarTimes.Click += new System.EventHandler(this.btnGerenciarTimes_Click);
+            // 
+            // btnGerenciarArbitros
+            // 
+            this.btnGerenciarArbitros.FlatAppearance.BorderSize = 0;
+            this.btnGerenciarArbitros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerenciarArbitros.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGerenciarArbitros.Image = global::TabelaFut.Properties.Resources.arbitros100px;
+            this.btnGerenciarArbitros.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGerenciarArbitros.Location = new System.Drawing.Point(493, 32);
+            this.btnGerenciarArbitros.Name = "btnGerenciarArbitros";
+            this.btnGerenciarArbitros.Size = new System.Drawing.Size(174, 127);
+            this.btnGerenciarArbitros.TabIndex = 2;
+            this.btnGerenciarArbitros.Text = "Gerenciar Árbitros";
+            this.btnGerenciarArbitros.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGerenciarArbitros.UseVisualStyleBackColor = true;
+            this.btnGerenciarArbitros.Click += new System.EventHandler(this.btnGerenciarArbitros_Click);
+            // 
+            // btnGerenciarJogadores
+            // 
+            this.btnGerenciarJogadores.FlatAppearance.BorderSize = 0;
+            this.btnGerenciarJogadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerenciarJogadores.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGerenciarJogadores.Image = global::TabelaFut.Properties.Resources.jogador100px;
+            this.btnGerenciarJogadores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGerenciarJogadores.Location = new System.Drawing.Point(298, 32);
+            this.btnGerenciarJogadores.Name = "btnGerenciarJogadores";
+            this.btnGerenciarJogadores.Size = new System.Drawing.Size(174, 127);
+            this.btnGerenciarJogadores.TabIndex = 1;
+            this.btnGerenciarJogadores.Text = "Gerenciar Jogadores";
+            this.btnGerenciarJogadores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGerenciarJogadores.UseVisualStyleBackColor = true;
+            this.btnGerenciarJogadores.Click += new System.EventHandler(this.btnGerenciarJogadores_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,11 +470,11 @@
             this.materialTabControl1.ResumeLayout(false);
             this.tabClassificacao.ResumeLayout(false);
             this.tabClassificacao.PerformLayout();
+            this.tabGerenciamento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabGerenciamento.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,7 +487,6 @@
         private System.Windows.Forms.TabPage tabGerenciamento;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabPage tabEstatisticas;
         private System.Windows.Forms.ListView lvClassificacoes;
         private System.Windows.Forms.ColumnHeader Time;
@@ -510,6 +516,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnGerenciarTimes;
+        private System.Windows.Forms.Button btnGerenciarEstadios;
     }
 }
 

@@ -104,7 +104,7 @@ namespace TabelaFut
     {
         public int ID;
         public string Nome;
-        public List<LayoutTimes> Times = new List<LayoutTimes>();
+        public List<int> IDTimes = new List<int>();
     }
 
     public class DBPartidas

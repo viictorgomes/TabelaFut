@@ -59,3 +59,5 @@ C:\Users\g98ma.NOTEDOGIU-011L8.000\Desktop\TrabES2\TabelaFut\TabelaFut\obj\Debug
 C:\Users\g98ma.NOTEDOGIU-011L8.000\Desktop\TrabES2\TabelaFut\TabelaFut\obj\Debug\TabelaFut.csproj.CopyComplete
 C:\Users\g98ma.NOTEDOGIU-011L8.000\Desktop\TrabES2\TabelaFut\TabelaFut\obj\Debug\TabelaFut.exe
 C:\Users\g98ma.NOTEDOGIU-011L8.000\Desktop\TrabES2\TabelaFut\TabelaFut\obj\Debug\TabelaFut.pdb
+C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.Forms.frmGerenciarEstadios.resources
+C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.Forms.frmEditEstadio.resources

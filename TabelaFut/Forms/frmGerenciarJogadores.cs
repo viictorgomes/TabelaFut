@@ -83,7 +83,10 @@ namespace TabelaFut.Forms
             if (result == DialogResult.OK)
             {
                 Manager.Instance.dBJogadores.Jogadores.Remove(remover);
+                Manager.Instance.dBTimes.Times.Find(x => x.ID == id).Jogadores.Remove(id);
+
                 DBManager.Serialize(Manager.Instance.dBJogadores);
+                DBManager.Serialize(Manager.Instance.dBTimes);
 
                 var infoMsgBox = new CustomMsgBox("Informações Atualizadas!", $"Jogador {remover.Nome} removido com sucesso.", MessageBoxType.E_CancelarConfirmar);
                 var infoResult = infoMsgBox.ShowDialog();

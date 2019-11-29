@@ -9,7 +9,7 @@ namespace TabelaFut
 {
     public class Manager
     {
-        #region Variáveis Fixas
+        #region Default Setup
 
         private readonly string[] _times = {"Athletico Paranaense", "Atlético Mineiro", "Avaí", "Bahia", "Botafogo", "Ceará", "Chapecoense", "Corinthians", "Cruzeiro", "CSA", "Flamengo", "Fluminense", "Fortaleza", "Goiás", "Grêmio", "Internacional", "Palmeiras", "Santos", "São Paulo", "Vasco da Gama"};
 
@@ -18,6 +18,30 @@ namespace TabelaFut
         private readonly string[] _arbitros = { "Miguel", "Arthur", "Heitor", "Bernardo", "Davi", "Théo", "Lorenzo", "Gabriel", "Pedro", "Benjamin", "Matheus", "Lucas", "Nicolas", "Joaquim", "Samuel", "Henrique", "Rafael", "Guilherme", "Enzo", "Murilo", "Benício", "Gustavo", "Isaac", "João", "Miguel Lucca", "Enzo Gabriel", "Pedro Henrique", "Felipe", "João  Pedro", "Pietro", "Anthony", "Daniel", "Bryan", "Davi Lucca", "Leonardo", "Vicente", "Eduardo", "Antônio", "Vitor Noah", "Caio", "João Emanuel", "Cauã", "João Lucas", "Calebe", "Enrico", "Vinícius Bento", "Thales", "Thiago", "Giulio", "Estêvão" };
 
         private readonly string[] _estadios = { "Arena da Baixada", "Independência", "Ressacada", "Arena Fonte Nova", "Nilton Santos", "Arena Castelão", "Arena Condá", "Arena Corinthians", "Mineirão", "Rei Pelé", "Maracanã", "Serra Dourada", "Arena do Grêmio", "Beira-Rio", "Allianz Parque", "Vila Belmiro", "Morumbi", "São Januário" };
+
+        public enum Estadios
+        {
+            NONE,
+
+            ArenadaBaixada,
+            Independencia,
+            Ressacada,
+            ArenaFonteNova,
+            NiltonSantos,
+            ArenaCastelao,
+            ArenaConda,
+            ArenaCorinthians,
+            Mineirao,
+            ReiPele,
+            Maracana,
+            SerraDourada,
+            ArenadoGremio,
+            BeiraRio,
+            AllianzParque,
+            VilaBelmiro,
+            Morumbi,
+            SaoJanuario
+        }
 
         #endregion
 
@@ -71,12 +95,10 @@ namespace TabelaFut
 
             for (int i = 0; i < 19; i++)
             {
-                /* Está pegando a referência e alterando o valor de _inst.dBArbitros.Arbitros, sendo que isso não deve ocorrer
-                EstadiosDisponiveis = _inst.dBEstadios.Estadios;
-                ArbitrosDisponiveis = _inst.dBArbitros.Arbitros; */
 
                 EstadiosDisponiveis = new List<LayoutEstadios>();
                 ArbitrosDisponiveis = new List<LayoutArbitros>();
+
                 for (int aux = 0; aux < _inst.dBEstadios.Estadios.Count; aux++)
                 {
                     EstadiosDisponiveis.Add(_inst.dBEstadios.Estadios[aux]);
@@ -111,19 +133,15 @@ namespace TabelaFut
                     antigoTimesB.Add(timesB[j]);
                 }
 
-                //primeiro do B vai pro segundo do A
                 timesA[1] = timesB[0];
 
-                //último do A vai pro último do B
                 timesB[9] = timesA[9];
 
-                //movendo para a direita
                 for (int k = 2; k < 10; k++)
                 {
                     timesA[k] = antigoTimesA[k - 1];
                 }
 
-                //movendo para a esquerda
                 for (int k = 0; k < 9; k++)
                 {
                     timesB[k] = antigoTimesB[k + 1];
@@ -138,7 +156,7 @@ namespace TabelaFut
 
             foreach (var estadio in EstadiosDisponiveis)
             {
-                if (estadio.Times.Contains(timeA) || estadio.Times.Contains(timeB))
+                if (estadio.IDTimes.Contains(timeA.ID) || estadio.IDTimes.Contains(timeB.ID))
                 {
                     estadioAtual = estadio;
                     EstadiosDisponiveis.Remove(estadio);
@@ -164,102 +182,102 @@ namespace TabelaFut
             return arbitros;
         }
 
-        private List<LayoutTimes> GetTimes(string estadio)
+        private List<int> SetupTimesPorEstadio(int estadio)
         {
-            var times = new List<LayoutTimes>();
+            var times = new List<int>();
             
             switch (estadio)
             {
-                case "Arena da Baixada":
+                case (int)Manager.Estadios.ArenadaBaixada:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Athletico Paranaense")));
+                        times.Add(1); // Athletico Paranaense
                     }
                     break;
-                case "Independência":
+                case (int)Manager.Estadios.Independencia:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Atlético Mineiro")));
+                        times.Add(2); // Atlético Mineiro
                     }
                     break;
-                case "Ressacada":
+                case (int)Manager.Estadios.Ressacada:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Avaí")));
+                        times.Add(3); // Avaí
                     }
                     break;
-                case "Arena Fonte Nova":
+                case (int)Manager.Estadios.ArenaFonteNova:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Bahia")));
+                        times.Add(4); // Bahia
                     }
                     break;
-                case "Nilton Santos":
+                case (int)Manager.Estadios.NiltonSantos:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Botafogo")));
+                        times.Add(5); // Botafogo
                     }
                     break;
-                case "Arena Castelão":
+                case (int)Manager.Estadios.ArenaCastelao:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Ceará")));
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Fortaleza")));
+                        times.Add(6); // Ceará
+                        times.Add(13); // Fortaleza
                     }
                     break;
-                case "Arena Condá":
+                case (int)Manager.Estadios.ArenaConda:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Chapecoense")));
+                        times.Add(7); // Chapecoense
                     }
                     break;
-                case "Arena Corinthians":
+                case (int)Manager.Estadios.ArenaCorinthians:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Corinthians")));
+                        times.Add(8); // Corinthians
                     }
                     break;
-                case "Mineirão":
+                case (int)Manager.Estadios.Mineirao:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Cruzeiro")));
+                        times.Add(9); // Cruzeiro
                     }
                     break;
-                case "Rei Pelé":
+                case (int)Manager.Estadios.ReiPele:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("CSA")));
+                        times.Add(10); // CSA
                     }
                     break;
-                case "Maracanã":
+                case (int)Manager.Estadios.Maracana:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Flamengo")));
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Fluminense")));
+                        times.Add(11); // Flamengo
+                        times.Add(12); // Fluminense
                     }
                     break;
-                case "Serra Dourada":
+                case (int)Manager.Estadios.SerraDourada:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Goiás")));
+                        times.Add(14); // Goiás
                     }
                     break;
-                case "Arena do Grêmio":
+                case (int)Manager.Estadios.ArenadoGremio:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Grêmio")));
+                        times.Add(15); // Grêmio
                     }
                     break;
-                case "Beira-Rio":
+                case (int)Manager.Estadios.BeiraRio:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Internacional")));
+                        times.Add(16); // Internacional
                     }
                     break;
-                case "Allianz Parque":
+                case (int)Manager.Estadios.AllianzParque:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Palmeiras")));
+                        times.Add(17); // Palmeiras
                     }
                     break;
-                case "Vila Belmiro":
+                case (int)Manager.Estadios.VilaBelmiro:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Santos")));
+                        times.Add(18); // Santos
                     }
                     break;
-                case "Morumbi":
+                case (int)Manager.Estadios.Morumbi:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("São Paulo")));
+                        times.Add(19); // São Paulo
                     }
                     break;
-                case "São Januário":
+                case (int)Manager.Estadios.SaoJanuario:
                     {
-                        times.Add(_inst.dBTimes.Times.First(x => x.Nome.Equals("Vasco da Gama")));
+                        times.Add(20); // Vasco da Gama
                     }
                     break;
             }
@@ -318,7 +336,7 @@ namespace TabelaFut
                 {
                     ID = ++dBEstadios.UltimoID,
                     Nome = estadio,
-                    Times = GetTimes(estadio)
+                    IDTimes = SetupTimesPorEstadio(dBEstadios.UltimoID)
                 });
             }
 
