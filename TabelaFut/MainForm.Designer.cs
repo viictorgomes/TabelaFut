@@ -52,6 +52,16 @@
             this.GolsSofridos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SaldoDeGols = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPartidas = new System.Windows.Forms.TabPage();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.GolsTimeB_10 = new MaterialSkin.Controls.MaterialLabel();
             this.GolsTimeA_10 = new MaterialSkin.Controls.MaterialLabel();
             this.TimeB_10 = new MaterialSkin.Controls.MaterialLabel();
@@ -89,11 +99,8 @@
             this.TimeB_2 = new MaterialSkin.Controls.MaterialLabel();
             this.TimeA_2 = new MaterialSkin.Controls.MaterialLabel();
             this.lblRodada = new MaterialSkin.Controls.MaterialLabel();
-            this.btn_PagDireita = new System.Windows.Forms.Button();
-            this.btn_PagMeio = new System.Windows.Forms.Button();
             this.btn_ProxPag = new System.Windows.Forms.Button();
             this.btn_PagAnterior = new System.Windows.Forms.Button();
-            this.btn_PagEsquerda = new System.Windows.Forms.Button();
             this.materialDivider7 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
             this.materialDivider5 = new MaterialSkin.Controls.MaterialDivider();
@@ -344,6 +351,16 @@
             // 
             // tabPartidas
             // 
+            this.tabPartidas.Controls.Add(this.button15);
+            this.tabPartidas.Controls.Add(this.button14);
+            this.tabPartidas.Controls.Add(this.button13);
+            this.tabPartidas.Controls.Add(this.button12);
+            this.tabPartidas.Controls.Add(this.button11);
+            this.tabPartidas.Controls.Add(this.button10);
+            this.tabPartidas.Controls.Add(this.button4);
+            this.tabPartidas.Controls.Add(this.button3);
+            this.tabPartidas.Controls.Add(this.button2);
+            this.tabPartidas.Controls.Add(this.button1);
             this.tabPartidas.Controls.Add(this.GolsTimeB_10);
             this.tabPartidas.Controls.Add(this.GolsTimeA_10);
             this.tabPartidas.Controls.Add(this.TimeB_10);
@@ -381,11 +398,8 @@
             this.tabPartidas.Controls.Add(this.TimeB_2);
             this.tabPartidas.Controls.Add(this.TimeA_2);
             this.tabPartidas.Controls.Add(this.lblRodada);
-            this.tabPartidas.Controls.Add(this.btn_PagDireita);
-            this.tabPartidas.Controls.Add(this.btn_PagMeio);
             this.tabPartidas.Controls.Add(this.btn_ProxPag);
             this.tabPartidas.Controls.Add(this.btn_PagAnterior);
-            this.tabPartidas.Controls.Add(this.btn_PagEsquerda);
             this.tabPartidas.Controls.Add(this.materialDivider7);
             this.tabPartidas.Controls.Add(this.materialDivider6);
             this.tabPartidas.Controls.Add(this.materialDivider5);
@@ -403,13 +417,163 @@
             this.tabPartidas.Text = "Partidas";
             this.tabPartidas.UseVisualStyleBackColor = true;
             // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Gainsboro;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button15.ForeColor = System.Drawing.Color.Black;
+            this.button15.Location = new System.Drawing.Point(661, 386);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(83, 41);
+            this.button15.TabIndex = 61;
+            this.button15.Text = "Detalhes";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Gainsboro;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button14.ForeColor = System.Drawing.Color.Black;
+            this.button14.Location = new System.Drawing.Point(280, 386);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(83, 41);
+            this.button14.TabIndex = 60;
+            this.button14.Text = "Detalhes";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Gainsboro;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button13.ForeColor = System.Drawing.Color.Black;
+            this.button13.Location = new System.Drawing.Point(661, 297);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(83, 41);
+            this.button13.TabIndex = 59;
+            this.button13.Text = "Detalhes";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Gainsboro;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button12.ForeColor = System.Drawing.Color.Black;
+            this.button12.Location = new System.Drawing.Point(280, 297);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(83, 41);
+            this.button12.TabIndex = 58;
+            this.button12.Text = "Detalhes";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Gainsboro;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button11.ForeColor = System.Drawing.Color.Black;
+            this.button11.Location = new System.Drawing.Point(661, 208);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(83, 41);
+            this.button11.TabIndex = 57;
+            this.button11.Text = "Detalhes";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Gainsboro;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button10.ForeColor = System.Drawing.Color.Black;
+            this.button10.Location = new System.Drawing.Point(280, 208);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(83, 41);
+            this.button10.TabIndex = 56;
+            this.button10.Text = "Detalhes";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Gainsboro;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(661, 116);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(83, 41);
+            this.button4.TabIndex = 55;
+            this.button4.Text = "Detalhes";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gainsboro;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(280, 116);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(83, 41);
+            this.button3.TabIndex = 54;
+            this.button3.Text = "Detalhes";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(661, 24);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(83, 41);
+            this.button2.TabIndex = 53;
+            this.button2.Text = "Detalhes";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(280, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 41);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Detalhes";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GolsTimeB_10
             // 
             this.GolsTimeB_10.AutoSize = true;
             this.GolsTimeB_10.Depth = 0;
             this.GolsTimeB_10.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_10.Location = new System.Drawing.Point(705, 409);
+            this.GolsTimeB_10.Location = new System.Drawing.Point(622, 409);
             this.GolsTimeB_10.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_10.Name = "GolsTimeB_10";
             this.GolsTimeB_10.Size = new System.Drawing.Size(17, 19);
@@ -422,7 +586,7 @@
             this.GolsTimeA_10.Depth = 0;
             this.GolsTimeA_10.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_10.Location = new System.Drawing.Point(705, 382);
+            this.GolsTimeA_10.Location = new System.Drawing.Point(622, 382);
             this.GolsTimeA_10.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_10.Name = "GolsTimeA_10";
             this.GolsTimeA_10.Size = new System.Drawing.Size(17, 19);
@@ -435,7 +599,7 @@
             this.TimeB_10.Depth = 0;
             this.TimeB_10.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_10.Location = new System.Drawing.Point(447, 409);
+            this.TimeB_10.Location = new System.Drawing.Point(406, 409);
             this.TimeB_10.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_10.Name = "TimeB_10";
             this.TimeB_10.Size = new System.Drawing.Size(56, 19);
@@ -448,7 +612,7 @@
             this.TimeA_10.Depth = 0;
             this.TimeA_10.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_10.Location = new System.Drawing.Point(447, 382);
+            this.TimeA_10.Location = new System.Drawing.Point(406, 382);
             this.TimeA_10.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_10.Name = "TimeA_10";
             this.TimeA_10.Size = new System.Drawing.Size(57, 19);
@@ -461,7 +625,7 @@
             this.GolsTimeB_9.Depth = 0;
             this.GolsTimeB_9.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_9.Location = new System.Drawing.Point(309, 409);
+            this.GolsTimeB_9.Location = new System.Drawing.Point(242, 409);
             this.GolsTimeB_9.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_9.Name = "GolsTimeB_9";
             this.GolsTimeB_9.Size = new System.Drawing.Size(17, 19);
@@ -474,7 +638,7 @@
             this.GolsTimeA_9.Depth = 0;
             this.GolsTimeA_9.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_9.Location = new System.Drawing.Point(309, 382);
+            this.GolsTimeA_9.Location = new System.Drawing.Point(242, 382);
             this.GolsTimeA_9.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_9.Name = "GolsTimeA_9";
             this.GolsTimeA_9.Size = new System.Drawing.Size(17, 19);
@@ -487,7 +651,7 @@
             this.TimeB_9.Depth = 0;
             this.TimeB_9.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_9.Location = new System.Drawing.Point(51, 409);
+            this.TimeB_9.Location = new System.Drawing.Point(19, 409);
             this.TimeB_9.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_9.Name = "TimeB_9";
             this.TimeB_9.Size = new System.Drawing.Size(56, 19);
@@ -500,7 +664,7 @@
             this.TimeA_9.Depth = 0;
             this.TimeA_9.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_9.Location = new System.Drawing.Point(51, 382);
+            this.TimeA_9.Location = new System.Drawing.Point(19, 382);
             this.TimeA_9.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_9.Name = "TimeA_9";
             this.TimeA_9.Size = new System.Drawing.Size(57, 19);
@@ -513,7 +677,7 @@
             this.GolsTimeB_8.Depth = 0;
             this.GolsTimeB_8.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_8.Location = new System.Drawing.Point(706, 320);
+            this.GolsTimeB_8.Location = new System.Drawing.Point(622, 320);
             this.GolsTimeB_8.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_8.Name = "GolsTimeB_8";
             this.GolsTimeB_8.Size = new System.Drawing.Size(17, 19);
@@ -526,7 +690,7 @@
             this.GolsTimeA_8.Depth = 0;
             this.GolsTimeA_8.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_8.Location = new System.Drawing.Point(706, 293);
+            this.GolsTimeA_8.Location = new System.Drawing.Point(622, 293);
             this.GolsTimeA_8.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_8.Name = "GolsTimeA_8";
             this.GolsTimeA_8.Size = new System.Drawing.Size(17, 19);
@@ -539,7 +703,7 @@
             this.TimeB_8.Depth = 0;
             this.TimeB_8.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_8.Location = new System.Drawing.Point(448, 320);
+            this.TimeB_8.Location = new System.Drawing.Point(406, 320);
             this.TimeB_8.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_8.Name = "TimeB_8";
             this.TimeB_8.Size = new System.Drawing.Size(56, 19);
@@ -552,7 +716,7 @@
             this.TimeA_8.Depth = 0;
             this.TimeA_8.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_8.Location = new System.Drawing.Point(448, 293);
+            this.TimeA_8.Location = new System.Drawing.Point(406, 293);
             this.TimeA_8.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_8.Name = "TimeA_8";
             this.TimeA_8.Size = new System.Drawing.Size(57, 19);
@@ -565,7 +729,7 @@
             this.GolsTimeB_7.Depth = 0;
             this.GolsTimeB_7.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_7.Location = new System.Drawing.Point(309, 320);
+            this.GolsTimeB_7.Location = new System.Drawing.Point(242, 320);
             this.GolsTimeB_7.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_7.Name = "GolsTimeB_7";
             this.GolsTimeB_7.Size = new System.Drawing.Size(17, 19);
@@ -578,7 +742,7 @@
             this.GolsTimeA_7.Depth = 0;
             this.GolsTimeA_7.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_7.Location = new System.Drawing.Point(309, 293);
+            this.GolsTimeA_7.Location = new System.Drawing.Point(242, 293);
             this.GolsTimeA_7.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_7.Name = "GolsTimeA_7";
             this.GolsTimeA_7.Size = new System.Drawing.Size(17, 19);
@@ -591,7 +755,7 @@
             this.TimeB_7.Depth = 0;
             this.TimeB_7.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_7.Location = new System.Drawing.Point(51, 320);
+            this.TimeB_7.Location = new System.Drawing.Point(19, 320);
             this.TimeB_7.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_7.Name = "TimeB_7";
             this.TimeB_7.Size = new System.Drawing.Size(56, 19);
@@ -604,7 +768,7 @@
             this.TimeA_7.Depth = 0;
             this.TimeA_7.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_7.Location = new System.Drawing.Point(51, 293);
+            this.TimeA_7.Location = new System.Drawing.Point(19, 293);
             this.TimeA_7.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_7.Name = "TimeA_7";
             this.TimeA_7.Size = new System.Drawing.Size(57, 19);
@@ -617,7 +781,7 @@
             this.GolsTimeB_6.Depth = 0;
             this.GolsTimeB_6.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_6.Location = new System.Drawing.Point(707, 231);
+            this.GolsTimeB_6.Location = new System.Drawing.Point(622, 231);
             this.GolsTimeB_6.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_6.Name = "GolsTimeB_6";
             this.GolsTimeB_6.Size = new System.Drawing.Size(17, 19);
@@ -630,7 +794,7 @@
             this.GolsTimeA_6.Depth = 0;
             this.GolsTimeA_6.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_6.Location = new System.Drawing.Point(707, 204);
+            this.GolsTimeA_6.Location = new System.Drawing.Point(622, 204);
             this.GolsTimeA_6.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_6.Name = "GolsTimeA_6";
             this.GolsTimeA_6.Size = new System.Drawing.Size(17, 19);
@@ -643,7 +807,7 @@
             this.TimeB_6.Depth = 0;
             this.TimeB_6.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_6.Location = new System.Drawing.Point(449, 231);
+            this.TimeB_6.Location = new System.Drawing.Point(406, 231);
             this.TimeB_6.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_6.Name = "TimeB_6";
             this.TimeB_6.Size = new System.Drawing.Size(56, 19);
@@ -656,7 +820,7 @@
             this.TimeA_6.Depth = 0;
             this.TimeA_6.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_6.Location = new System.Drawing.Point(449, 204);
+            this.TimeA_6.Location = new System.Drawing.Point(406, 204);
             this.TimeA_6.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_6.Name = "TimeA_6";
             this.TimeA_6.Size = new System.Drawing.Size(57, 19);
@@ -669,7 +833,7 @@
             this.GolsTimeB_5.Depth = 0;
             this.GolsTimeB_5.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_5.Location = new System.Drawing.Point(309, 231);
+            this.GolsTimeB_5.Location = new System.Drawing.Point(242, 231);
             this.GolsTimeB_5.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_5.Name = "GolsTimeB_5";
             this.GolsTimeB_5.Size = new System.Drawing.Size(17, 19);
@@ -682,7 +846,7 @@
             this.GolsTimeA_5.Depth = 0;
             this.GolsTimeA_5.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_5.Location = new System.Drawing.Point(309, 204);
+            this.GolsTimeA_5.Location = new System.Drawing.Point(242, 204);
             this.GolsTimeA_5.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_5.Name = "GolsTimeA_5";
             this.GolsTimeA_5.Size = new System.Drawing.Size(17, 19);
@@ -695,7 +859,7 @@
             this.TimeB_5.Depth = 0;
             this.TimeB_5.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_5.Location = new System.Drawing.Point(51, 231);
+            this.TimeB_5.Location = new System.Drawing.Point(19, 231);
             this.TimeB_5.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_5.Name = "TimeB_5";
             this.TimeB_5.Size = new System.Drawing.Size(56, 19);
@@ -708,7 +872,7 @@
             this.TimeA_5.Depth = 0;
             this.TimeA_5.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_5.Location = new System.Drawing.Point(51, 204);
+            this.TimeA_5.Location = new System.Drawing.Point(19, 204);
             this.TimeA_5.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_5.Name = "TimeA_5";
             this.TimeA_5.Size = new System.Drawing.Size(57, 19);
@@ -721,7 +885,7 @@
             this.GolsTimeB_4.Depth = 0;
             this.GolsTimeB_4.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_4.Location = new System.Drawing.Point(708, 139);
+            this.GolsTimeB_4.Location = new System.Drawing.Point(622, 139);
             this.GolsTimeB_4.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_4.Name = "GolsTimeB_4";
             this.GolsTimeB_4.Size = new System.Drawing.Size(17, 19);
@@ -734,7 +898,7 @@
             this.GolsTimeA_4.Depth = 0;
             this.GolsTimeA_4.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_4.Location = new System.Drawing.Point(708, 112);
+            this.GolsTimeA_4.Location = new System.Drawing.Point(622, 112);
             this.GolsTimeA_4.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_4.Name = "GolsTimeA_4";
             this.GolsTimeA_4.Size = new System.Drawing.Size(17, 19);
@@ -747,7 +911,7 @@
             this.TimeB_4.Depth = 0;
             this.TimeB_4.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_4.Location = new System.Drawing.Point(450, 139);
+            this.TimeB_4.Location = new System.Drawing.Point(406, 139);
             this.TimeB_4.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_4.Name = "TimeB_4";
             this.TimeB_4.Size = new System.Drawing.Size(56, 19);
@@ -760,7 +924,7 @@
             this.TimeA_4.Depth = 0;
             this.TimeA_4.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_4.Location = new System.Drawing.Point(450, 112);
+            this.TimeA_4.Location = new System.Drawing.Point(406, 112);
             this.TimeA_4.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_4.Name = "TimeA_4";
             this.TimeA_4.Size = new System.Drawing.Size(57, 19);
@@ -773,7 +937,7 @@
             this.GolsTimeB_3.Depth = 0;
             this.GolsTimeB_3.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_3.Location = new System.Drawing.Point(309, 139);
+            this.GolsTimeB_3.Location = new System.Drawing.Point(242, 139);
             this.GolsTimeB_3.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_3.Name = "GolsTimeB_3";
             this.GolsTimeB_3.Size = new System.Drawing.Size(17, 19);
@@ -786,7 +950,7 @@
             this.GolsTimeA_3.Depth = 0;
             this.GolsTimeA_3.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_3.Location = new System.Drawing.Point(309, 112);
+            this.GolsTimeA_3.Location = new System.Drawing.Point(242, 112);
             this.GolsTimeA_3.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_3.Name = "GolsTimeA_3";
             this.GolsTimeA_3.Size = new System.Drawing.Size(17, 19);
@@ -799,7 +963,7 @@
             this.TimeB_3.Depth = 0;
             this.TimeB_3.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_3.Location = new System.Drawing.Point(51, 139);
+            this.TimeB_3.Location = new System.Drawing.Point(19, 139);
             this.TimeB_3.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_3.Name = "TimeB_3";
             this.TimeB_3.Size = new System.Drawing.Size(56, 19);
@@ -812,7 +976,7 @@
             this.TimeA_3.Depth = 0;
             this.TimeA_3.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_3.Location = new System.Drawing.Point(51, 112);
+            this.TimeA_3.Location = new System.Drawing.Point(19, 112);
             this.TimeA_3.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_3.Name = "TimeA_3";
             this.TimeA_3.Size = new System.Drawing.Size(57, 19);
@@ -825,7 +989,7 @@
             this.GolsTimeB_2.Depth = 0;
             this.GolsTimeB_2.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_2.Location = new System.Drawing.Point(709, 46);
+            this.GolsTimeB_2.Location = new System.Drawing.Point(622, 46);
             this.GolsTimeB_2.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_2.Name = "GolsTimeB_2";
             this.GolsTimeB_2.Size = new System.Drawing.Size(17, 19);
@@ -838,7 +1002,7 @@
             this.GolsTimeA_2.Depth = 0;
             this.GolsTimeA_2.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_2.Location = new System.Drawing.Point(709, 19);
+            this.GolsTimeA_2.Location = new System.Drawing.Point(622, 19);
             this.GolsTimeA_2.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_2.Name = "GolsTimeA_2";
             this.GolsTimeA_2.Size = new System.Drawing.Size(17, 19);
@@ -851,7 +1015,7 @@
             this.TimeB_2.Depth = 0;
             this.TimeB_2.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_2.Location = new System.Drawing.Point(451, 46);
+            this.TimeB_2.Location = new System.Drawing.Point(406, 46);
             this.TimeB_2.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_2.Name = "TimeB_2";
             this.TimeB_2.Size = new System.Drawing.Size(56, 19);
@@ -864,7 +1028,7 @@
             this.TimeA_2.Depth = 0;
             this.TimeA_2.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_2.Location = new System.Drawing.Point(451, 19);
+            this.TimeA_2.Location = new System.Drawing.Point(406, 19);
             this.TimeA_2.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_2.Name = "TimeA_2";
             this.TimeA_2.Size = new System.Drawing.Size(57, 19);
@@ -884,34 +1048,6 @@
             this.lblRodada.TabIndex = 15;
             this.lblRodada.Text = "Rodada (0) de 20";
             // 
-            // btn_PagDireita
-            // 
-            this.btn_PagDireita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.btn_PagDireita.FlatAppearance.BorderSize = 0;
-            this.btn_PagDireita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PagDireita.Font = new System.Drawing.Font("Roboto", 11F);
-            this.btn_PagDireita.ForeColor = System.Drawing.Color.White;
-            this.btn_PagDireita.Location = new System.Drawing.Point(410, 460);
-            this.btn_PagDireita.Name = "btn_PagDireita";
-            this.btn_PagDireita.Size = new System.Drawing.Size(46, 41);
-            this.btn_PagDireita.TabIndex = 14;
-            this.btn_PagDireita.Text = "3";
-            this.btn_PagDireita.UseVisualStyleBackColor = false;
-            // 
-            // btn_PagMeio
-            // 
-            this.btn_PagMeio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.btn_PagMeio.FlatAppearance.BorderSize = 0;
-            this.btn_PagMeio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PagMeio.Font = new System.Drawing.Font("Roboto", 11F);
-            this.btn_PagMeio.ForeColor = System.Drawing.Color.White;
-            this.btn_PagMeio.Location = new System.Drawing.Point(358, 460);
-            this.btn_PagMeio.Name = "btn_PagMeio";
-            this.btn_PagMeio.Size = new System.Drawing.Size(46, 41);
-            this.btn_PagMeio.TabIndex = 13;
-            this.btn_PagMeio.Text = "2";
-            this.btn_PagMeio.UseVisualStyleBackColor = false;
-            // 
             // btn_ProxPag
             // 
             this.btn_ProxPag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
@@ -919,12 +1055,13 @@
             this.btn_ProxPag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ProxPag.Font = new System.Drawing.Font("Roboto", 11F);
             this.btn_ProxPag.ForeColor = System.Drawing.Color.White;
-            this.btn_ProxPag.Location = new System.Drawing.Point(462, 460);
+            this.btn_ProxPag.Location = new System.Drawing.Point(389, 460);
             this.btn_ProxPag.Name = "btn_ProxPag";
             this.btn_ProxPag.Size = new System.Drawing.Size(46, 41);
             this.btn_ProxPag.TabIndex = 12;
             this.btn_ProxPag.Text = ">";
             this.btn_ProxPag.UseVisualStyleBackColor = false;
+            this.btn_ProxPag.Click += new System.EventHandler(this.btn_ProxPag_Click);
             // 
             // btn_PagAnterior
             // 
@@ -933,26 +1070,13 @@
             this.btn_PagAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PagAnterior.Font = new System.Drawing.Font("Roboto", 11F);
             this.btn_PagAnterior.ForeColor = System.Drawing.Color.White;
-            this.btn_PagAnterior.Location = new System.Drawing.Point(254, 460);
+            this.btn_PagAnterior.Location = new System.Drawing.Point(329, 460);
             this.btn_PagAnterior.Name = "btn_PagAnterior";
             this.btn_PagAnterior.Size = new System.Drawing.Size(46, 41);
             this.btn_PagAnterior.TabIndex = 11;
             this.btn_PagAnterior.Text = "<";
             this.btn_PagAnterior.UseVisualStyleBackColor = false;
-            // 
-            // btn_PagEsquerda
-            // 
-            this.btn_PagEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.btn_PagEsquerda.FlatAppearance.BorderSize = 0;
-            this.btn_PagEsquerda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PagEsquerda.Font = new System.Drawing.Font("Roboto", 11F);
-            this.btn_PagEsquerda.ForeColor = System.Drawing.Color.White;
-            this.btn_PagEsquerda.Location = new System.Drawing.Point(306, 460);
-            this.btn_PagEsquerda.Name = "btn_PagEsquerda";
-            this.btn_PagEsquerda.Size = new System.Drawing.Size(46, 41);
-            this.btn_PagEsquerda.TabIndex = 10;
-            this.btn_PagEsquerda.Text = "1";
-            this.btn_PagEsquerda.UseVisualStyleBackColor = false;
+            this.btn_PagAnterior.Click += new System.EventHandler(this.btn_PagAnterior_Click);
             // 
             // materialDivider7
             // 
@@ -991,7 +1115,7 @@
             // 
             this.materialDivider4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialDivider4.Depth = 0;
-            this.materialDivider4.Location = new System.Drawing.Point(0, 179);
+            this.materialDivider4.Location = new System.Drawing.Point(-32, 179);
             this.materialDivider4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider4.Name = "materialDivider4";
             this.materialDivider4.Size = new System.Drawing.Size(800, 2);
@@ -1026,7 +1150,7 @@
             this.GolsTimeB_1.Depth = 0;
             this.GolsTimeB_1.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeB_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeB_1.Location = new System.Drawing.Point(309, 46);
+            this.GolsTimeB_1.Location = new System.Drawing.Point(242, 46);
             this.GolsTimeB_1.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeB_1.Name = "GolsTimeB_1";
             this.GolsTimeB_1.Size = new System.Drawing.Size(17, 19);
@@ -1039,7 +1163,7 @@
             this.GolsTimeA_1.Depth = 0;
             this.GolsTimeA_1.Font = new System.Drawing.Font("Roboto", 11F);
             this.GolsTimeA_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.GolsTimeA_1.Location = new System.Drawing.Point(309, 19);
+            this.GolsTimeA_1.Location = new System.Drawing.Point(242, 19);
             this.GolsTimeA_1.MouseState = MaterialSkin.MouseState.HOVER;
             this.GolsTimeA_1.Name = "GolsTimeA_1";
             this.GolsTimeA_1.Size = new System.Drawing.Size(17, 19);
@@ -1052,7 +1176,7 @@
             this.TimeB_1.Depth = 0;
             this.TimeB_1.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeB_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeB_1.Location = new System.Drawing.Point(51, 46);
+            this.TimeB_1.Location = new System.Drawing.Point(19, 46);
             this.TimeB_1.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeB_1.Name = "TimeB_1";
             this.TimeB_1.Size = new System.Drawing.Size(56, 19);
@@ -1065,7 +1189,7 @@
             this.TimeA_1.Depth = 0;
             this.TimeA_1.Font = new System.Drawing.Font("Roboto", 11F);
             this.TimeA_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TimeA_1.Location = new System.Drawing.Point(51, 19);
+            this.TimeA_1.Location = new System.Drawing.Point(19, 19);
             this.TimeA_1.MouseState = MaterialSkin.MouseState.HOVER;
             this.TimeA_1.Name = "TimeA_1";
             this.TimeA_1.Size = new System.Drawing.Size(57, 19);
@@ -1303,12 +1427,9 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider5;
         private MaterialSkin.Controls.MaterialDivider materialDivider4;
         private MaterialSkin.Controls.MaterialDivider materialDivider7;
-        private System.Windows.Forms.Button btn_PagEsquerda;
-        private System.Windows.Forms.Button btn_PagMeio;
         private System.Windows.Forms.Button btn_ProxPag;
         private System.Windows.Forms.Button btn_PagAnterior;
         private MaterialSkin.Controls.MaterialLabel lblRodada;
-        private System.Windows.Forms.Button btn_PagDireita;
         private MaterialSkin.Controls.MaterialLabel GolsTimeB_10;
         private MaterialSkin.Controls.MaterialLabel GolsTimeA_10;
         private MaterialSkin.Controls.MaterialLabel TimeB_10;
@@ -1345,6 +1466,16 @@
         private MaterialSkin.Controls.MaterialLabel GolsTimeA_2;
         private MaterialSkin.Controls.MaterialLabel TimeB_2;
         private MaterialSkin.Controls.MaterialLabel TimeA_2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }
 

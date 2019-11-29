@@ -16,6 +16,8 @@ namespace TabelaFut
 {
     public partial class MainForm : MaterialForm
     {
+        private int PaginaPartidas = 1;
+
         public class IntegerComparer : IComparer
         {
             private int _colIndex;
@@ -105,21 +107,28 @@ namespace TabelaFut
             {
                 index = partida.ID;
 
-                if (index <= 10)
+                if (partida.ID > 10)
                 {
-                    var lblTimeA = Controls.Find($"TimeA_{index}", true).FirstOrDefault() as Label;
-                    var lblTimeB = Controls.Find($"TimeB_{index}", true).FirstOrDefault() as Label;
-                    var lblGolsTimeA = Controls.Find($"GolsTimeA_{index}", true).FirstOrDefault() as Label;
-                    var lblGolsTimeB = Controls.Find($"GolsTimeB_{index}", true).FirstOrDefault() as Label;
-
-                    lblTimeA.Text = partida.TimeA.Nome;
-                    lblTimeB.Text = partida.TimeB.Nome;
-                    lblGolsTimeA.Text = partida.GolsTimeA.ToString();
-                    lblGolsTimeB.Text = partida.GolsTimeB.ToString();
+                    index = partida.ID % 10;
+                    if(index == 0)
+                    {
+                        index = 10;
+                    }
                 }
+
+                var lblTimeA = Controls.Find($"TimeA_{index}", true).FirstOrDefault() as Label;
+                var lblTimeB = Controls.Find($"TimeB_{index}", true).FirstOrDefault() as Label;
+                var lblGolsTimeA = Controls.Find($"GolsTimeA_{index}", true).FirstOrDefault() as Label;
+                var lblGolsTimeB = Controls.Find($"GolsTimeB_{index}", true).FirstOrDefault() as Label;
+
+                lblTimeA.Text = partida.TimeA.Nome;
+                lblTimeB.Text = partida.TimeB.Nome;
+                lblGolsTimeA.Text = partida.GolsTimeA.ToString();
+                lblGolsTimeB.Text = partida.GolsTimeB.ToString();
             }
 
-            lblRodada.Text = $"Rodada {Rodada} de 20";
+            lblRodada.Text = $"Rodada {Rodada} de 19";
+            PaginaPartidas = Rodada;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -161,6 +170,81 @@ namespace TabelaFut
         {
             var frm = new frmGerenciarEstadios();
             frm.ShowDialog();
+        }
+
+        private void AlterarPaginaPartida(int Pag)
+        {
+            RefreshPartidas(Pag);
+        }
+
+        private void DetalhesPartida(int Partida)
+        {
+            var partida = Manager.Instance.dBPartidas.Partidas.Find(x => x.ID == Partida);
+
+            var frm = new DetalhesPartida(partida);
+            frm.ShowDialog();
+        }
+
+        private void btn_ProxPag_Click(object sender, EventArgs e)
+        {
+            if (PaginaPartidas < 19)
+                AlterarPaginaPartida(PaginaPartidas + 1);
+        }
+
+        private void btn_PagAnterior_Click(object sender, EventArgs e)
+        {
+            if (PaginaPartidas > 1)
+                AlterarPaginaPartida(PaginaPartidas - 1);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(1 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(2 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(3 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(4 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(5 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(6 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(7 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(8 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(9 + ((PaginaPartidas - 1) * 10));
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            DetalhesPartida(10 + ((PaginaPartidas - 1) * 10));
         }
     }
 }

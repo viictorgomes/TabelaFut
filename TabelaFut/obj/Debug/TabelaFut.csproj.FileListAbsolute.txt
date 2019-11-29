@@ -61,3 +61,4 @@ C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.csproj.GenerateR
 C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.csproj.CopyComplete
 C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.exe
 C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.pdb
+C:\Users\Victor\Desktop\TabelaFut\TabelaFut\obj\Debug\TabelaFut.Forms.DetalhesPartida.resources

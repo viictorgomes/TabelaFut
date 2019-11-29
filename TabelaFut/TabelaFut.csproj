@@ -71,6 +71,12 @@
     <Compile Include="Forms\CustomMsgBox.Designer.cs">
       <DependentUpon>CustomMsgBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DetalhesPartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetalhesPartida.Designer.cs">
+      <DependentUpon>DetalhesPartida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEditArbitro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CustomMsgBox.resx">
       <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetalhesPartida.resx">
+      <DependentUpon>DetalhesPartida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEditArbitro.resx">
       <DependentUpon>frmEditArbitro.cs</DependentUpon>
