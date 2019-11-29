@@ -33,13 +33,9 @@
             this.tabClassificacao = new System.Windows.Forms.TabPage();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.lblLegenda4 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblLegenda3 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblLegenda2 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblLegenda1 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lvClassificacoes = new System.Windows.Forms.ListView();
             this.Spacer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Colocacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,6 +48,20 @@
             this.GolsSofridos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SaldoDeGols = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPartidas = new System.Windows.Forms.TabPage();
+            this.IDPartida_10 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_9 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_8 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_7 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_6 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_5 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_4 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_3 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_2 = new MaterialSkin.Controls.MaterialLabel();
+            this.IDPartida_1 = new MaterialSkin.Controls.MaterialLabel();
+            this.btnProxTime = new System.Windows.Forms.Button();
+            this.btnTimeAnterior = new System.Windows.Forms.Button();
+            this.radioPorTime = new MaterialSkin.Controls.MaterialRadioButton();
+            this.radioPorRodada = new MaterialSkin.Controls.MaterialRadioButton();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -112,25 +122,27 @@
             this.TimeB_1 = new MaterialSkin.Controls.MaterialLabel();
             this.TimeA_1 = new MaterialSkin.Controls.MaterialLabel();
             this.tabGerenciamento = new System.Windows.Forms.TabPage();
-            this.btnGerenciarEstadios = new System.Windows.Forms.Button();
-            this.btnGerenciarTimes = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnGerenciarArbitros = new System.Windows.Forms.Button();
-            this.btnGerenciarJogadores = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.lbl_TabelaFut = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLimparCamp = new System.Windows.Forms.Button();
+            this.btnTodasRodadas = new System.Windows.Forms.Button();
+            this.btnJogarRodada = new System.Windows.Forms.Button();
+            this.btnGerenciarEstadios = new System.Windows.Forms.Button();
+            this.btnGerenciarTimes = new System.Windows.Forms.Button();
+            this.btnGerenciarArbitros = new System.Windows.Forms.Button();
+            this.btnGerenciarJogadores = new System.Windows.Forms.Button();
             this.materialTabControl1.SuspendLayout();
             this.tabClassificacao.SuspendLayout();
+            this.tabPartidas.SuspendLayout();
+            this.tabGerenciamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPartidas.SuspendLayout();
-            this.tabGerenciamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -190,15 +202,6 @@
             this.lblLegenda4.TabIndex = 8;
             this.lblLegenda4.Text = "Rebaixamento";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
-            this.pictureBox3.Location = new System.Drawing.Point(324, 484);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // lblLegenda3
             // 
             this.lblLegenda3.AutoSize = true;
@@ -211,15 +214,6 @@
             this.lblLegenda3.Size = new System.Drawing.Size(271, 19);
             this.lblLegenda3.TabIndex = 6;
             this.lblLegenda3.Text = "Fase de grupos da Copa Sul-Americana";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(83)))));
-            this.pictureBox4.Location = new System.Drawing.Point(324, 459);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
             // 
             // lblLegenda2
             // 
@@ -234,15 +228,6 @@
             this.lblLegenda2.TabIndex = 4;
             this.lblLegenda2.Text = "Qualificatórias da Copa Libertadores";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(123)))), ((int)(((byte)(23)))));
-            this.pictureBox2.Location = new System.Drawing.Point(9, 484);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // lblLegenda1
             // 
             this.lblLegenda1.AutoSize = true;
@@ -255,15 +240,6 @@
             this.lblLegenda1.Size = new System.Drawing.Size(258, 19);
             this.lblLegenda1.TabIndex = 2;
             this.lblLegenda1.Text = "Fase de grupos da Copa Libertadores";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 459);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lvClassificacoes
             // 
@@ -352,6 +328,20 @@
             // 
             // tabPartidas
             // 
+            this.tabPartidas.Controls.Add(this.IDPartida_10);
+            this.tabPartidas.Controls.Add(this.IDPartida_9);
+            this.tabPartidas.Controls.Add(this.IDPartida_8);
+            this.tabPartidas.Controls.Add(this.IDPartida_7);
+            this.tabPartidas.Controls.Add(this.IDPartida_6);
+            this.tabPartidas.Controls.Add(this.IDPartida_5);
+            this.tabPartidas.Controls.Add(this.IDPartida_4);
+            this.tabPartidas.Controls.Add(this.IDPartida_3);
+            this.tabPartidas.Controls.Add(this.IDPartida_2);
+            this.tabPartidas.Controls.Add(this.IDPartida_1);
+            this.tabPartidas.Controls.Add(this.btnProxTime);
+            this.tabPartidas.Controls.Add(this.btnTimeAnterior);
+            this.tabPartidas.Controls.Add(this.radioPorTime);
+            this.tabPartidas.Controls.Add(this.radioPorRodada);
             this.tabPartidas.Controls.Add(this.button15);
             this.tabPartidas.Controls.Add(this.button14);
             this.tabPartidas.Controls.Add(this.button13);
@@ -417,6 +407,202 @@
             this.tabPartidas.TabIndex = 2;
             this.tabPartidas.Text = "Partidas";
             this.tabPartidas.UseVisualStyleBackColor = true;
+            // 
+            // IDPartida_10
+            // 
+            this.IDPartida_10.AutoSize = true;
+            this.IDPartida_10.Depth = 0;
+            this.IDPartida_10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_10.Location = new System.Drawing.Point(406, 424);
+            this.IDPartida_10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_10.Name = "IDPartida_10";
+            this.IDPartida_10.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_10.TabIndex = 75;
+            this.IDPartida_10.Text = "materialLabel1";
+            // 
+            // IDPartida_9
+            // 
+            this.IDPartida_9.AutoSize = true;
+            this.IDPartida_9.Depth = 0;
+            this.IDPartida_9.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_9.Location = new System.Drawing.Point(19, 424);
+            this.IDPartida_9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_9.Name = "IDPartida_9";
+            this.IDPartida_9.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_9.TabIndex = 74;
+            this.IDPartida_9.Text = "materialLabel1";
+            // 
+            // IDPartida_8
+            // 
+            this.IDPartida_8.AutoSize = true;
+            this.IDPartida_8.Depth = 0;
+            this.IDPartida_8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_8.Location = new System.Drawing.Point(406, 339);
+            this.IDPartida_8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_8.Name = "IDPartida_8";
+            this.IDPartida_8.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_8.TabIndex = 73;
+            this.IDPartida_8.Text = "materialLabel1";
+            // 
+            // IDPartida_7
+            // 
+            this.IDPartida_7.AutoSize = true;
+            this.IDPartida_7.Depth = 0;
+            this.IDPartida_7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_7.Location = new System.Drawing.Point(19, 339);
+            this.IDPartida_7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_7.Name = "IDPartida_7";
+            this.IDPartida_7.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_7.TabIndex = 72;
+            this.IDPartida_7.Text = "materialLabel1";
+            // 
+            // IDPartida_6
+            // 
+            this.IDPartida_6.AutoSize = true;
+            this.IDPartida_6.Depth = 0;
+            this.IDPartida_6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_6.Location = new System.Drawing.Point(406, 248);
+            this.IDPartida_6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_6.Name = "IDPartida_6";
+            this.IDPartida_6.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_6.TabIndex = 71;
+            this.IDPartida_6.Text = "materialLabel1";
+            // 
+            // IDPartida_5
+            // 
+            this.IDPartida_5.AutoSize = true;
+            this.IDPartida_5.Depth = 0;
+            this.IDPartida_5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_5.Location = new System.Drawing.Point(19, 248);
+            this.IDPartida_5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_5.Name = "IDPartida_5";
+            this.IDPartida_5.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_5.TabIndex = 70;
+            this.IDPartida_5.Text = "materialLabel1";
+            // 
+            // IDPartida_4
+            // 
+            this.IDPartida_4.AutoSize = true;
+            this.IDPartida_4.Depth = 0;
+            this.IDPartida_4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_4.Location = new System.Drawing.Point(406, 158);
+            this.IDPartida_4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_4.Name = "IDPartida_4";
+            this.IDPartida_4.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_4.TabIndex = 69;
+            this.IDPartida_4.Text = "materialLabel1";
+            // 
+            // IDPartida_3
+            // 
+            this.IDPartida_3.AutoSize = true;
+            this.IDPartida_3.Depth = 0;
+            this.IDPartida_3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_3.Location = new System.Drawing.Point(19, 158);
+            this.IDPartida_3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_3.Name = "IDPartida_3";
+            this.IDPartida_3.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_3.TabIndex = 68;
+            this.IDPartida_3.Text = "materialLabel1";
+            // 
+            // IDPartida_2
+            // 
+            this.IDPartida_2.AutoSize = true;
+            this.IDPartida_2.Depth = 0;
+            this.IDPartida_2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_2.Location = new System.Drawing.Point(406, 66);
+            this.IDPartida_2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_2.Name = "IDPartida_2";
+            this.IDPartida_2.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_2.TabIndex = 67;
+            this.IDPartida_2.Text = "materialLabel1";
+            // 
+            // IDPartida_1
+            // 
+            this.IDPartida_1.AutoSize = true;
+            this.IDPartida_1.Depth = 0;
+            this.IDPartida_1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.IDPartida_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.IDPartida_1.Location = new System.Drawing.Point(19, 66);
+            this.IDPartida_1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.IDPartida_1.Name = "IDPartida_1";
+            this.IDPartida_1.Size = new System.Drawing.Size(108, 19);
+            this.IDPartida_1.TabIndex = 66;
+            this.IDPartida_1.Text = "materialLabel1";
+            // 
+            // btnProxTime
+            // 
+            this.btnProxTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.btnProxTime.FlatAppearance.BorderSize = 0;
+            this.btnProxTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProxTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnProxTime.ForeColor = System.Drawing.Color.White;
+            this.btnProxTime.Location = new System.Drawing.Point(59, 464);
+            this.btnProxTime.Name = "btnProxTime";
+            this.btnProxTime.Size = new System.Drawing.Size(37, 32);
+            this.btnProxTime.TabIndex = 65;
+            this.btnProxTime.Text = ">";
+            this.btnProxTime.UseVisualStyleBackColor = false;
+            this.btnProxTime.Click += new System.EventHandler(this.btnProxTime_Click);
+            // 
+            // btnTimeAnterior
+            // 
+            this.btnTimeAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.btnTimeAnterior.FlatAppearance.BorderSize = 0;
+            this.btnTimeAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimeAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btnTimeAnterior.ForeColor = System.Drawing.Color.White;
+            this.btnTimeAnterior.Location = new System.Drawing.Point(16, 464);
+            this.btnTimeAnterior.Name = "btnTimeAnterior";
+            this.btnTimeAnterior.Size = new System.Drawing.Size(37, 32);
+            this.btnTimeAnterior.TabIndex = 64;
+            this.btnTimeAnterior.Text = "<";
+            this.btnTimeAnterior.UseVisualStyleBackColor = false;
+            this.btnTimeAnterior.Click += new System.EventHandler(this.btnTimeAnterior_Click);
+            // 
+            // radioPorTime
+            // 
+            this.radioPorTime.AutoSize = true;
+            this.radioPorTime.Depth = 0;
+            this.radioPorTime.Font = new System.Drawing.Font("Roboto", 10F);
+            this.radioPorTime.Location = new System.Drawing.Point(482, 481);
+            this.radioPorTime.Margin = new System.Windows.Forms.Padding(0);
+            this.radioPorTime.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.radioPorTime.MouseState = MaterialSkin.MouseState.HOVER;
+            this.radioPorTime.Name = "radioPorTime";
+            this.radioPorTime.Ripple = true;
+            this.radioPorTime.Size = new System.Drawing.Size(81, 30);
+            this.radioPorTime.TabIndex = 63;
+            this.radioPorTime.TabStop = true;
+            this.radioPorTime.Text = "Por time";
+            this.radioPorTime.UseVisualStyleBackColor = true;
+            this.radioPorTime.CheckedChanged += new System.EventHandler(this.radioPorTime_CheckedChanged);
+            // 
+            // radioPorRodada
+            // 
+            this.radioPorRodada.AutoSize = true;
+            this.radioPorRodada.Depth = 0;
+            this.radioPorRodada.Font = new System.Drawing.Font("Roboto", 10F);
+            this.radioPorRodada.Location = new System.Drawing.Point(482, 451);
+            this.radioPorRodada.Margin = new System.Windows.Forms.Padding(0);
+            this.radioPorRodada.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.radioPorRodada.MouseState = MaterialSkin.MouseState.HOVER;
+            this.radioPorRodada.Name = "radioPorRodada";
+            this.radioPorRodada.Ripple = true;
+            this.radioPorRodada.Size = new System.Drawing.Size(101, 30);
+            this.radioPorRodada.TabIndex = 62;
+            this.radioPorRodada.TabStop = true;
+            this.radioPorRodada.Text = "Por Rodada";
+            this.radioPorRodada.UseVisualStyleBackColor = true;
+            this.radioPorRodada.CheckedChanged += new System.EventHandler(this.radioPorRodada_CheckedChanged);
             // 
             // button15
             // 
@@ -1199,15 +1385,13 @@
             // 
             // tabGerenciamento
             // 
+            this.tabGerenciamento.Controls.Add(this.btnLimparCamp);
+            this.tabGerenciamento.Controls.Add(this.btnTodasRodadas);
+            this.tabGerenciamento.Controls.Add(this.btnJogarRodada);
             this.tabGerenciamento.Controls.Add(this.btnGerenciarEstadios);
             this.tabGerenciamento.Controls.Add(this.btnGerenciarTimes);
-            this.tabGerenciamento.Controls.Add(this.button8);
-            this.tabGerenciamento.Controls.Add(this.button9);
-            this.tabGerenciamento.Controls.Add(this.button7);
             this.tabGerenciamento.Controls.Add(this.btnGerenciarArbitros);
             this.tabGerenciamento.Controls.Add(this.btnGerenciarJogadores);
-            this.tabGerenciamento.Controls.Add(this.button5);
-            this.tabGerenciamento.Controls.Add(this.button6);
             this.tabGerenciamento.ForeColor = System.Drawing.Color.Black;
             this.tabGerenciamento.Location = new System.Drawing.Point(4, 22);
             this.tabGerenciamento.Name = "tabGerenciamento";
@@ -1216,6 +1400,115 @@
             this.tabGerenciamento.TabIndex = 1;
             this.tabGerenciamento.Text = "Gerenciamento";
             this.tabGerenciamento.UseVisualStyleBackColor = true;
+            // 
+            // materialTabSelector1
+            // 
+            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
+            this.materialTabSelector1.Depth = 0;
+            this.materialTabSelector1.Location = new System.Drawing.Point(0, 25);
+            this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabSelector1.Name = "materialTabSelector1";
+            this.materialTabSelector1.Size = new System.Drawing.Size(800, 50);
+            this.materialTabSelector1.TabIndex = 0;
+            this.materialTabSelector1.Text = "materialTabSelector1";
+            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
+            // 
+            // lbl_TabelaFut
+            // 
+            this.lbl_TabelaFut.AutoSize = true;
+            this.lbl_TabelaFut.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TabelaFut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbl_TabelaFut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_TabelaFut.Location = new System.Drawing.Point(4, 2);
+            this.lbl_TabelaFut.Name = "lbl_TabelaFut";
+            this.lbl_TabelaFut.Size = new System.Drawing.Size(73, 18);
+            this.lbl_TabelaFut.TabIndex = 2;
+            this.lbl_TabelaFut.Text = "TabelaFut";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
+            this.pictureBox3.Location = new System.Drawing.Point(324, 484);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(83)))));
+            this.pictureBox4.Location = new System.Drawing.Point(324, 459);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(123)))), ((int)(((byte)(23)))));
+            this.pictureBox2.Location = new System.Drawing.Point(9, 484);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 459);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnLimparCamp
+            // 
+            this.btnLimparCamp.FlatAppearance.BorderSize = 0;
+            this.btnLimparCamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparCamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLimparCamp.Image = global::TabelaFut.Properties.Resources.limparcamp;
+            this.btnLimparCamp.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLimparCamp.Location = new System.Drawing.Point(99, 351);
+            this.btnLimparCamp.Name = "btnLimparCamp";
+            this.btnLimparCamp.Size = new System.Drawing.Size(174, 127);
+            this.btnLimparCamp.TabIndex = 12;
+            this.btnLimparCamp.Text = "Limpar Campeonato";
+            this.btnLimparCamp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimparCamp.UseVisualStyleBackColor = true;
+            this.btnLimparCamp.Click += new System.EventHandler(this.btnLimparCamp_Click);
+            // 
+            // btnTodasRodadas
+            // 
+            this.btnTodasRodadas.FlatAppearance.BorderSize = 0;
+            this.btnTodasRodadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTodasRodadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnTodasRodadas.Image = global::TabelaFut.Properties.Resources.jogartodasrodadas;
+            this.btnTodasRodadas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTodasRodadas.Location = new System.Drawing.Point(493, 201);
+            this.btnTodasRodadas.Name = "btnTodasRodadas";
+            this.btnTodasRodadas.Size = new System.Drawing.Size(174, 127);
+            this.btnTodasRodadas.TabIndex = 11;
+            this.btnTodasRodadas.Text = "Jogar Todas Rodadas";
+            this.btnTodasRodadas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTodasRodadas.UseVisualStyleBackColor = true;
+            this.btnTodasRodadas.Click += new System.EventHandler(this.btnTodasRodadas_Click);
+            // 
+            // btnJogarRodada
+            // 
+            this.btnJogarRodada.FlatAppearance.BorderSize = 0;
+            this.btnJogarRodada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJogarRodada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnJogarRodada.Image = global::TabelaFut.Properties.Resources.jogarrodada;
+            this.btnJogarRodada.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnJogarRodada.Location = new System.Drawing.Point(298, 201);
+            this.btnJogarRodada.Name = "btnJogarRodada";
+            this.btnJogarRodada.Size = new System.Drawing.Size(174, 127);
+            this.btnJogarRodada.TabIndex = 10;
+            this.btnJogarRodada.Text = "Jogar 1 Rodada";
+            this.btnJogarRodada.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnJogarRodada.UseVisualStyleBackColor = true;
+            this.btnJogarRodada.Click += new System.EventHandler(this.btnJogarRodada_Click);
             // 
             // btnGerenciarEstadios
             // 
@@ -1249,35 +1542,6 @@
             this.btnGerenciarTimes.UseVisualStyleBackColor = true;
             this.btnGerenciarTimes.Click += new System.EventHandler(this.btnGerenciarTimes_Click);
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(298, 350);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(174, 127);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Jogar próxima rodada";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.btnJogadProximaRodada);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(493, 350);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(174, 127);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Jogar rodadas restantes";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.btnJogarTodasRodadas);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(99, 350);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(174, 127);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // btnGerenciarArbitros
             // 
             this.btnGerenciarArbitros.FlatAppearance.BorderSize = 0;
@@ -1310,49 +1574,6 @@
             this.btnGerenciarJogadores.UseVisualStyleBackColor = true;
             this.btnGerenciarJogadores.Click += new System.EventHandler(this.btnGerenciarJogadores_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(298, 201);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(174, 127);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(493, 201);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(174, 127);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // materialTabSelector1
-            // 
-            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
-            this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(0, 25);
-            this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(800, 50);
-            this.materialTabSelector1.TabIndex = 0;
-            this.materialTabSelector1.Text = "materialTabSelector1";
-            this.materialTabSelector1.Click += new System.EventHandler(this.materialTabSelector1_Click);
-            // 
-            // lbl_TabelaFut
-            // 
-            this.lbl_TabelaFut.AutoSize = true;
-            this.lbl_TabelaFut.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_TabelaFut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lbl_TabelaFut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_TabelaFut.Location = new System.Drawing.Point(4, 2);
-            this.lbl_TabelaFut.Name = "lbl_TabelaFut";
-            this.lbl_TabelaFut.Size = new System.Drawing.Size(73, 18);
-            this.lbl_TabelaFut.TabIndex = 2;
-            this.lbl_TabelaFut.Text = "TabelaFut";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1371,13 +1592,13 @@
             this.materialTabControl1.ResumeLayout(false);
             this.tabClassificacao.ResumeLayout(false);
             this.tabClassificacao.PerformLayout();
+            this.tabPartidas.ResumeLayout(false);
+            this.tabPartidas.PerformLayout();
+            this.tabGerenciamento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPartidas.ResumeLayout(false);
-            this.tabPartidas.PerformLayout();
-            this.tabGerenciamento.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1389,7 +1610,6 @@
         private System.Windows.Forms.TabPage tabClassificacao;
         private System.Windows.Forms.TabPage tabGerenciamento;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabPage tabPartidas;
         private System.Windows.Forms.ListView lvClassificacoes;
         private System.Windows.Forms.ColumnHeader Time;
@@ -1412,12 +1632,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Label lbl_TabelaFut;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnGerenciarJogadores;
         private System.Windows.Forms.Button btnGerenciarArbitros;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnGerenciarTimes;
         private System.Windows.Forms.Button btnGerenciarEstadios;
         private MaterialSkin.Controls.MaterialLabel TimeA_1;
@@ -1479,6 +1695,23 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private MaterialSkin.Controls.MaterialRadioButton radioPorRodada;
+        private MaterialSkin.Controls.MaterialRadioButton radioPorTime;
+        private System.Windows.Forms.Button btnProxTime;
+        private System.Windows.Forms.Button btnTimeAnterior;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_1;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_10;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_9;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_8;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_7;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_6;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_5;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_4;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_3;
+        private MaterialSkin.Controls.MaterialLabel IDPartida_2;
+        private System.Windows.Forms.Button btnTodasRodadas;
+        private System.Windows.Forms.Button btnJogarRodada;
+        private System.Windows.Forms.Button btnLimparCamp;
     }
 }
 

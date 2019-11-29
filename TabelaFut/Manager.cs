@@ -102,8 +102,11 @@ namespace TabelaFut
          * */
         public void CriarCampeonato()
         {
+
             dBRodadas.Rodadas.Clear();
             dBPartidas.Partidas.Clear();
+            dBRodadas.UltimoID = 0;
+            dBPartidas.UltimoID = 0;
 
             var rodadas = new List<LayoutRodadas>(19);
             var partidas = new List<LayoutPartidas>(190);
@@ -196,8 +199,10 @@ namespace TabelaFut
 
             var _rodada = dBRodadas.Rodadas.Find(r => r.Rodada == rodada.ID);
 
-            foreach (var partida in _rodada.Partidas)
+            foreach (var partidaDb in _rodada.Partidas)
             {
+                var partida = dBPartidas.Partidas.Find(p => p.ID == partidaDb.ID);
+
                 partida.GolsTimeA = GetGolsDoTime(true);
                 partida.GolsTimeB = GetGolsDoTime(false);
                 

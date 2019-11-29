@@ -216,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppIcon.ico" />
+    <None Include="Resources\limparcamp.png" />
+    <None Include="Resources\jogartodasrodadas.png" />
+    <None Include="Resources\jogarrodada.png" />
     <None Include="Resources\estadio100px.png" />
     <None Include="Resources\estadio100px1.png" />
   </ItemGroup>

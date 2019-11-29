@@ -139,4 +139,13 @@
   <data name="times100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\times100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="jogarrodada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jogarrodada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jogartodasrodadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jogartodasrodadas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="limparcamp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\limparcamp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
